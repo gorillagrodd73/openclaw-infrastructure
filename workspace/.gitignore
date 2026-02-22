@@ -1,0 +1,116 @@
+# ===============================================
+# OpenClaw Git Ignore - Comprehensive Exclusions
+# ===============================================
+
+# Security: Credentials & API Keys
+# =================================
+credentials/
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+
+# Google Cloud / OAuth
+google_credentials.json
+client_secret*.json
+*service-account*.json
+.goog*
+
+# AWS
+.aws/
+*.aws
+*aws-credentials*
+
+# OpenClaw Sensitive Data
+# ==========================
+.openclaw/
+credentials/
+client_secret_*.json
+*token*
+*secret*
+
+# Gateway Configuration with Tokens
+openclaw.json
+!openclaw.json.example
+
+# Session & Runtime Data
+completions/
+delivery-queue/
+subagents/
+device-queue/
+logs/*.log
+logs/
+*.log
+
+# ClawHub State
+.clawhub/
+
+# Memory & Personal Data
+memory/
+main/memory/
+pi/
+
+# Dependency & Installed Skills
+skills/*/
+!skills/.gitkeep
+
+# Keys & Auth
+identity/
+
+# OS & Editor Files
+# ==================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-*
+
+# Build & Temp
+# =============
+*.tmp
+*.temp
+*.cache
+.cache/
+tmp/
+temp/
+
+# Backup Files
+backups/
+*.bak
+*.backup
+*.old
+
+# Node/Python
+# ============
+node_modules/
+__pycache__/
+*.pyc
+.Python
+env/
+venv/
+.env
+.env.*
+
+# Archive Files
+# ==============
+*.tar.gz
+*.zip
+*.7z
+*.rar
+
+# Binary/Executable
+# =================
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+
+# workspace-state
+.openclaw/workspace-state.json
+.openclaw/update-check.json

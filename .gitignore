@@ -1,0 +1,128 @@
+# ===============================================
+# OpenClaw Root Git Ignore - Security First
+# ===============================================
+
+# NEVER COMMIT THESE - Security Critical
+# =======================================
+
+# Credentials & API Keys
+credentials/
+credentials/*
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+.env
+.env.*
+
+# OAuth & Service Accounts
+client_secret_*.json
+*service-account*.json
+google_credentials.json
+goog*
+
+# Tokens & Session Data
+*token*
+*.token
+refresh-token*
+access-token*
+
+# Gateway Configuration (contains secrets)
+openclaw.json
+openclaw.json.bak
+openclaw.json.bak.*
+!openclaw.json.example
+
+# Keys
+identity/
+
+# Backup Archives (contain sensitive data)
+backups/
+backups/*
+*.tar.gz
+*.zip
+*.7z
+
+# =======================================
+# Transitory / Runtime Files
+# =======================================
+
+# Logs
+logs/
+logs/*
+*.log
+
+# Session Data & Conversation Logs
+completions/
+delivery-queue/
+subagents/
+canvas/
+agents/*/sessions/
+agents/*/sessions/*
+*.jsonl
+*.jsonl.deleted.*
+
+# Update Metadata
+update-check.json
+
+# Device Data
+devices/
+
+# Workspace State (large, transient)
+workspace/.openclaw/
+workspace/.openclaw/*
+workspace-state.json
+
+# Memory (personal data)
+workspace/memory/
+workspace/memory/*
+workspace/main/memory/
+workspace/main/memory/*
+
+# ClawHub State
+workspace/.clawhub/
+workspace/.clawhub/*
+
+# Skills (reinstallable)
+workspace/skills/*/
+!workspace/skills/.gitkeep
+
+# =======================================
+# OS & Editor Files
+# =======================================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-*
+
+# Temp & Cache
+*.tmp
+*.temp
+.cache/
+tmp/
+temp/
+
+# =======================================
+# Build Artifacts
+# =======================================
+node_modules/
+__pycache__/
+*.pyc
+.Python
+env/
+venv/
+
+# Binaries
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+openclaw.json.bak.2
+openclaw.json.bak.2
