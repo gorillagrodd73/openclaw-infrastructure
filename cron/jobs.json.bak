@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "5cd7b247-41dc-4447-a8ce-16c4850dc2d2",
+      "agentId": "riddler",
+      "name": "Riddler Digest",
+      "enabled": true,
+      "createdAtMs": 1772042350337,
+      "updatedAtMs": 1772042350337,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 23 * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "You are Riddler. Execute /Users/chimpman/.openclaw/workspace/agents/riddler/workflow/digest-research.sh using exec tool. Process Cheetah output and generate structured digests. Report completion.",
+        "model": "nvidia-nim/moonshotai/kimi-k2.5"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last",
+        "to": "1472435146488545280"
+      },
+      "state": {
+        "nextRunAtMs": 1772089200000
+      }
+    },
+    {
+      "id": "ddbf1516-54bd-4bc0-a659-d0b52c4eff1a",
+      "agentId": "main",
+      "name": "Daily Git Update",
+      "enabled": true,
+      "createdAtMs": 1772042351014,
+      "updatedAtMs": 1772052444893,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 23 * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Git Update: Execute these commands using exec tool: cd /Users/chimpman/.openclaw/workspace && git add -A && git commit -m \"Auto-update: $(date -Iseconds)\" && git push origin main",
+        "model": "nvidia-nim/moonshotai/kimi-k2.5"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last",
+        "to": "1472435146488545280"
+      },
+      "state": {
+        "nextRunAtMs": 1772091000000,
+        "lastRunAtMs": 1772052350109,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 94784,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "cf21af9a-31f5-4b52-929d-5c9044ee4a08",
+      "agentId": "brainiac",
+      "name": "Brainiac OpenClaw System Health",
+      "enabled": true,
+      "createdAtMs": 1772042858373,
+      "updatedAtMs": 1772050006287,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 */4 * * *",
+        "staggerMs": 300000
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "You are Brainiac. Run OpenClaw System Health Check. Check: 1) Gateway status, 2) Cron scheduler status, 3) Disk space, 4) Log errors. Report system health to Discord.",
+        "model": "nvidia-nim/moonshotai/kimi-k2.5"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last",
+        "to": "1472435146488545280"
+      },
+      "state": {
+        "nextRunAtMs": 1772064123930,
+        "lastRunAtMs": 1772049723943,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 282344,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "8dea3b63-34cd-4935-9b57-0589df77410f",
+      "agentId": "main",
+      "name": "Grodd Daily Standup",
+      "enabled": true,
+      "createdAtMs": 1772051023962,
+      "updatedAtMs": 1772051023962,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "You are Grodd. Generate your daily standup report. Check: 1) Agent health from Brainiac reports, 2) Cheetah research progress, 3) Riddler digest status, 4) Any errors or issues from overnight, 5) Today's priorities. Post comprehensive standup to Discord #general. Be concise but thorough.",
+        "model": "nvidia-nim/moonshotai/kimi-k2.5"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last",
+        "to": "1472435146488545280"
+      },
+      "state": {
+        "nextRunAtMs": 1772125200000
+      }
+    },
+    {
+      "id": "5c3cdbc7-4481-4215-afbc-d71966ce6492",
+      "agentId": "cheetah",
+      "name": "Cheetah Research",
+      "enabled": true,
+      "createdAtMs": 1772052292352,
+      "updatedAtMs": 1772053833113,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 22 * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "You are Cheetah performing 0-cost research. Follow these EXACT steps using tools:\n\nSTEP 1: Determine today's topic based on day of week (Mon=AI/LLM, Tue=DevTools, Wed=VTT, Thu=AI-DM).\n\nSTEP 2: Use exec tool to search Reddit API:\ncurl -sL --max-time 20 -A 'Mozilla/5.0' 'https://www.reddit.com/r/LocalLLaMA/top.json?limit=25&t=week' | jq -r '.data.children[].data.url'\n(Use appropriate subreddit for today's topic)\n\nSTEP 3: Use exec tool to search GitHub API:\ncurl -sL --max-time 20 -A 'Mozilla/5.0' 'https://api.github.com/search/repositories?q=ai+dungeon+master&sort=updated'\n\nSTEP 4: Use web_fetch tool to extract content from each interesting URL found. Use Jina AI endpoint: https://r.jina.ai/http://URL\n\nSTEP 5: Generate markdown report with: Executive Summary, Trending Discussions, New Tools, Actionable Recommendations.\n\nSTEP 6: Save report to /Users/chimpman/.openclaw/workspace/agents/cheetah/output/[TOPIC]_[DATE]/report.md\n\nDO NOT use web_search. DO use exec and web_fetch tools explicitly. Report completion.",
+        "model": "nvidia-nim/moonshotai/kimi-k2.5"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last",
+        "to": "1472435146488545280"
+      },
+      "state": {
+        "nextRunAtMs": 1772085600000,
+        "lastRunAtMs": 1772053475938,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 357175,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "8462a33a-5225-4404-95bf-61512988e486",
+      "agentId": "brainiac",
+      "name": "Brainiac Agent Health Check",
+      "enabled": true,
+      "createdAtMs": 1772053679444,
+      "updatedAtMs": 1772053679444,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 2 * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "You are Brainiac. Check agent health. Verify Cheetah output folder has recent files, Riddler digest folder has processed files, check for any agent errors in logs. Report status.",
+        "model": "nvidia-nim/moonshotai/kimi-k2.5"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last",
+        "to": "1472435146488545280"
+      },
+      "state": {
+        "nextRunAtMs": 1772100000000
+      }
+    }
+  ]
+}

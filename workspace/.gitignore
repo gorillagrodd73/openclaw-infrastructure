@@ -114,3 +114,7 @@ venv/
 # workspace-state
 .openclaw/workspace-state.json
 .openclaw/update-check.json
+# Backup files
+*.backup*
+*.backup.202*
+**/agent/models.json
