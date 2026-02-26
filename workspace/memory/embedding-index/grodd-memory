@@ -1,0 +1,12 @@
+#!/bin/bash
+# Grodd Memory System CLI Wrapper
+# Usage: ./grodd-memory [index|query|search] [options]
+
+VENV_PATH="/Users/chimpman/.openclaw/.memory-venv"
+SCRIPT_PATH="/Users/chimpman/.openclaw/workspace/memory/embedding-index/memory_system.py"
+
+# Activate virtual environment
+source "$VENV_PATH/bin/activate"
+
+# Run the Python script
+python3 "$SCRIPT_PATH" "$@"

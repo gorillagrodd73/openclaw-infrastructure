@@ -78,6 +78,7 @@ workspace-state.json
 # Memory (personal data)
 workspace/memory/
 workspace/memory/*
+!workspace/memory/embedding-index/
 workspace/main/memory/
 workspace/main/memory/*
 
