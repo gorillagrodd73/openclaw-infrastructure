@@ -41,7 +41,7 @@
       "name": "Daily Git Update",
       "enabled": true,
       "createdAtMs": 1772042351014,
-      "updatedAtMs": 1772082405897,
+      "updatedAtMs": 1772091461406,
       "schedule": {
         "kind": "cron",
         "expr": "30 23 * * *"
@@ -59,15 +59,14 @@
         "to": "1472435146488545280"
       },
       "state": {
-        "nextRunAtMs": 1772091000000,
-        "lastRunAtMs": 1772082043227,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 362670,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "runningAtMs": 1772091000009
+        "nextRunAtMs": 1772177400000,
+        "lastRunAtMs": 1772091000012,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 461394,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "runningAtMs": 1772144833327
       }
     },
     {
@@ -76,7 +75,7 @@
       "name": "Brainiac OpenClaw System Health",
       "enabled": true,
       "createdAtMs": 1772042858373,
-      "updatedAtMs": 1772078888427,
+      "updatedAtMs": 1772136579807,
       "schedule": {
         "kind": "cron",
         "expr": "0 */4 * * *",
@@ -95,11 +94,11 @@
         "to": "1472435146488545280"
       },
       "state": {
-        "nextRunAtMs": 1772092923930,
-        "lastRunAtMs": 1772078523938,
+        "nextRunAtMs": 1772150523930,
+        "lastRunAtMs": 1772136427171,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 364489,
+        "lastDurationMs": 152636,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
@@ -111,7 +110,7 @@
       "name": "Grodd Daily Standup",
       "enabled": true,
       "createdAtMs": 1772051023962,
-      "updatedAtMs": 1772051023962,
+      "updatedAtMs": 1772125661313,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * *"
@@ -129,7 +128,14 @@
         "to": "1472435146488545280"
       },
       "state": {
-        "nextRunAtMs": 1772125200000
+        "nextRunAtMs": 1772211600000,
+        "lastRunAtMs": 1772125200011,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 461302,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
       }
     },
     {
@@ -172,7 +178,7 @@
       "name": "Grundy Heartbeat",
       "enabled": true,
       "createdAtMs": 1772055717252,
-      "updatedAtMs": 1772071411663,
+      "updatedAtMs": 1772136427105,
       "schedule": {
         "kind": "cron",
         "expr": "0 */6 * * *",
@@ -191,11 +197,11 @@
         "to": "1472435146488545280"
       },
       "state": {
-        "nextRunAtMs": 1772092816692,
-        "lastRunAtMs": 1772071216699,
+        "nextRunAtMs": 1772157616692,
+        "lastRunAtMs": 1772136016705,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 194964,
+        "lastDurationMs": 410400,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
@@ -207,7 +213,7 @@
       "name": "Brainiac Agent Health Check",
       "enabled": true,
       "createdAtMs": 1772056418494,
-      "updatedAtMs": 1772060981331,
+      "updatedAtMs": 1772100439978,
       "schedule": {
         "kind": "cron",
         "expr": "0 2 * * *"
@@ -225,11 +231,11 @@
         "to": "1472435146488545280"
       },
       "state": {
-        "nextRunAtMs": 1772100000000,
-        "lastRunAtMs": 1772060735468,
+        "nextRunAtMs": 1772186400000,
+        "lastRunAtMs": 1772100000012,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 245863,
+        "lastDurationMs": 439966,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
