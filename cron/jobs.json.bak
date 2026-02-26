@@ -68,7 +68,7 @@
       "name": "Brainiac OpenClaw System Health",
       "enabled": true,
       "createdAtMs": 1772042858373,
-      "updatedAtMs": 1772050006287,
+      "updatedAtMs": 1772064532371,
       "schedule": {
         "kind": "cron",
         "expr": "0 */4 * * *",
@@ -87,11 +87,11 @@
         "to": "1472435146488545280"
       },
       "state": {
-        "nextRunAtMs": 1772064123930,
-        "lastRunAtMs": 1772049723943,
+        "nextRunAtMs": 1772078523930,
+        "lastRunAtMs": 1772064123942,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 282344,
+        "lastDurationMs": 408429,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
@@ -162,9 +162,9 @@
       "id": "8462a33a-5225-4404-95bf-61512988e486",
       "agentId": "brainiac",
       "name": "Brainiac Agent Health Check",
-      "enabled": true,
+      "enabled": false,
       "createdAtMs": 1772053679444,
-      "updatedAtMs": 1772053679444,
+      "updatedAtMs": 1772061003540,
       "schedule": {
         "kind": "cron",
         "expr": "0 2 * * *"
@@ -182,7 +182,100 @@
         "to": "1472435146488545280"
       },
       "state": {
-        "nextRunAtMs": 1772100000000
+        "lastRunAtMs": 1772055451069,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 476089,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "78957557-1d10-413e-8e81-4d66df60ebff",
+      "agentId": "grundy",
+      "name": "Grundy Heartbeat",
+      "enabled": true,
+      "createdAtMs": 1772055717252,
+      "updatedAtMs": 1772055717252,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 */6 * * *",
+        "staggerMs": 300000
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "You are Grundy. Check your heartbeat: verify git sync status, check for any sync errors, and report status to Discord.",
+        "model": "nvidia-nim/moonshotai/kimi-k2.5"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last",
+        "to": "1472435146488545280"
+      },
+      "state": {
+        "nextRunAtMs": 1772071216692
+      }
+    },
+    {
+      "id": "b3f3ed84-4052-4390-9478-7641f22df355",
+      "agentId": "cheetah",
+      "name": "Cheetah Research",
+      "enabled": false,
+      "createdAtMs": 1772056417830,
+      "updatedAtMs": 1772060987306,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 22 * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "You are Cheetah. Follow these EXACT procedural steps using OpenClaw tools:\n\nSTEP 1: Use exec tool to search Reddit API:\n- cmd: curl -sL --max-time 20 -A 'Mozilla/5.0' 'https://www.reddit.com/r/FoundryVTT/search.json?q=VTT&limit=10'\n- Save URLs to /tmp/cheetah-reddit-urls.txt\n\nSTEP 2: Use exec tool to search GitHub API:\n- cmd: curl -sL --max-time 20 -A 'Mozilla/5.0' 'https://api.github.com/search/repositories?q=foundry+vtt&per_page=10'\n- Save URLs to /tmp/cheetah-github-urls.txt\n\nSTEP 3: Use web_fetch tool on each URL found:\n- For each URL in files, call web_fetch with maxChars: 5000\n- Save results to /Users/chimpman/.openclaw/workspace/agents/cheetah/output/VTTRPG/[date]/raw/\n\nSTEP 4: Use exec tool to analyze and structure:\n- Generate markdown report with: Executive Summary, Features, Pricing\n- Save to /Users/chimpman/.openclaw/workspace/agents/cheetah/output/[topic]/actionable/report.md\n\nREPORT completion status to Discord.",
+        "model": "nvidia-nim/moonshotai/kimi-k2.5"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last",
+        "to": "1472435146488545280"
+      },
+      "state": {}
+    },
+    {
+      "id": "1352dcc3-11ba-4c47-8072-564db53bf88f",
+      "agentId": "brainiac",
+      "name": "Brainiac Agent Health Check",
+      "enabled": true,
+      "createdAtMs": 1772056418494,
+      "updatedAtMs": 1772060981331,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 2 * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "You are Brainiac. Follow these EXACT steps using exec tool:\n\nSTEP 1: Check directory structure:\n- cmd: ls -la /Users/chimpman/.openclaw/workspace/agents/cheetah/output/ | head -10\n- cmd: ls -la /Users/chimpman/.openclaw/workspace/agents/riddler/output/ | head -10\n\nSTEP 2: Count recent output files:\n- Count .md files in cheetah output modified in last 24h\n- Count .md files in riddler output modified in last 24h\n\nSTEP 3: Check for errors:\n- cmd: tail -50 /Users/chimpman/.openclaw/logs/gateway.err.log | grep -i error\n\nSTEP 4: Generate health report:\n- Create markdown report with: Agent Status, File Counts, Errors Found, Recommendations\n- Save to /Users/chimpman/.openclaw/workspace-brainiac/reports/health-[date].md\n\nREPORT status to Discord #general.",
+        "model": "nvidia-nim/moonshotai/kimi-k2.5"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last",
+        "to": "1472435146488545280"
+      },
+      "state": {
+        "nextRunAtMs": 1772100000000,
+        "lastRunAtMs": 1772060735468,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 245863,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
       }
     }
   ]
