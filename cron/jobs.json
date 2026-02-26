@@ -7,7 +7,7 @@
       "name": "Riddler Digest",
       "enabled": true,
       "createdAtMs": 1772042350337,
-      "updatedAtMs": 1772089800037,
+      "updatedAtMs": 1772148448470,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *"
@@ -16,7 +16,7 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "You are Riddler. Execute /Users/chimpman/.openclaw/workspace/agents/riddler/workflow/digest-research.sh using exec tool. Process Cheetah output and generate structured digests. Report completion.",
+        "message": "You are Riddler. Execute /Users/chimpman/.openclaw/workspace-riddler/workflow/digest-research.sh using exec tool. Process Cheetah output and generate structured digests. Report completion.",
         "model": "nvidia-nim/moonshotai/kimi-k2.5"
       },
       "delivery": {
@@ -26,13 +26,13 @@
       },
       "state": {
         "nextRunAtMs": 1772175600000,
-        "lastRunAtMs": 1772089200012,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 600025,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 2,
-        "lastError": "cron: job execution timed out"
+        "lastRunAtMs": 1772148042524,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 405946,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
       }
     },
     {
@@ -41,7 +41,7 @@
       "name": "Daily Git Update",
       "enabled": true,
       "createdAtMs": 1772042351014,
-      "updatedAtMs": 1772091461406,
+      "updatedAtMs": 1772144916380,
       "schedule": {
         "kind": "cron",
         "expr": "30 23 * * *"
@@ -50,7 +50,7 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Git Update: Execute these commands using exec tool: cd /Users/chimpman/.openclaw/workspace && git add -A && git commit -m \"Auto-update: $(date -Iseconds)\" && git push origin main",
+        "message": "Git Update: Execute these commands:\n\ncd /Users/chimpman/.openclaw && git add -A && git commit -m \"Auto-update: $(date -Iseconds)\" && git push origin main\n\nReport: file count changed, status.",
         "model": "nvidia-nim/moonshotai/kimi-k2.5"
       },
       "delivery": {
@@ -60,13 +60,13 @@
       },
       "state": {
         "nextRunAtMs": 1772177400000,
-        "lastRunAtMs": 1772091000012,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 461394,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1,
-        "runningAtMs": 1772144833327
+        "lastRunAtMs": 1772144833327,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 83053,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
       }
     },
     {
@@ -144,7 +144,7 @@
       "name": "Cheetah Research",
       "enabled": true,
       "createdAtMs": 1772052292352,
-      "updatedAtMs": 1772086110722,
+      "updatedAtMs": 1772147582175,
       "schedule": {
         "kind": "cron",
         "expr": "0 22 * * *"
@@ -163,13 +163,13 @@
       },
       "state": {
         "nextRunAtMs": 1772172000000,
-        "lastRunAtMs": 1772085600010,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 510712,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "lastRunAtMs": 1772146982150,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 600025,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "Error: cron: job execution timed out"
       }
     },
     {
@@ -178,17 +178,17 @@
       "name": "Grundy Heartbeat",
       "enabled": true,
       "createdAtMs": 1772055717252,
-      "updatedAtMs": 1772136427105,
+      "updatedAtMs": 1772148448470,
       "schedule": {
         "kind": "cron",
-        "expr": "0 */6 * * *",
+        "expr": "0 * * * *",
         "staggerMs": 300000
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "You are Grundy. Check your heartbeat: verify git sync status, check for any sync errors, and report status to Discord.",
+        "message": "You are Grundy. Read your HEARTBEAT.md file for detailed tasks. Execute health checks: 1) Check all agents (Grodd, Cheetah, Riddler, Brainiac, Sinestro, Toyman) for recent activity, 2) Verify git sync status across all workspaces, 3) Check disk space, 4) Report memory index status, 5) Identify and report any stuck agents or errors. Report health summary to Discord #general. If all is well, report HEARTBEAT_OK with system stats.",
         "model": "nvidia-nim/moonshotai/kimi-k2.5"
       },
       "delivery": {

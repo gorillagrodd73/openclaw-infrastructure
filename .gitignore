@@ -46,6 +46,13 @@ backups/*
 *.7z
 
 # =======================================
+# Agent Runtime Data
+# =======================================
+agents/
+agents/*
+memory/*.sqlite
+
+# =======================================
 # Transitory / Runtime Files
 # =======================================
 
@@ -79,8 +86,6 @@ workspace-state.json
 workspace/memory/
 workspace/memory/*
 !workspace/memory/embedding-index/
-workspace/main/memory/
-workspace/main/memory/*
 
 # ClawHub State
 workspace/.clawhub/
