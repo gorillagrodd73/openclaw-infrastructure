@@ -46,7 +46,12 @@ def generate_living_report(topic: str) -> str:
 
     # Get today's findings for changelog section
     today = datetime.now().strftime('%Y-%m-%d')
-    projects = kb.get('projects', [])
+    projects_raw = kb.get('projects', [])
+    # Handle dict or list format
+    if isinstance(projects_raw, dict):
+        projects = list(projects_raw.values())
+    else:
+        projects = projects_raw
     new_today = [p for p in projects if p.get('firstSeen') == today]
 
     # Sort projects by stars (descending)
@@ -122,8 +127,13 @@ def generate_daily_summary(topic: str) -> str:
         kb = json.load(f)
 
     today = datetime.now().strftime('%Y-%m-%d')
-    projects = kb.get('projects', {})
-
+    projects_raw = kb.get('projects', {})
+    # Handle dict or list format
+    if isinstance(projects_raw, dict):
+        projects = projects_raw
+    else:
+        projects = {p.get('name', str(i)): p for i, p in enumerate(projects_raw)}
+    
     new_projects = [p for p in projects.values() if p.get('firstSeen') == today]
     updated = [p for p in projects.values() if p.get('lastSeen') == today and p.get('firstSeen') != today]
 

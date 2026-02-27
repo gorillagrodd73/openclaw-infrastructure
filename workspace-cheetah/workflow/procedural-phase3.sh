@@ -41,7 +41,9 @@ echo "[STEP 1/4] Generating Living Report..." | tee -a "$LOG_FILE"
 cd "$WORKSPACE"
 python3 scripts/generate_report.py "$TOPIC" --type living 2>> "$LOG_FILE"
 
-LIVING_REPORT="$REPORTS_DIR/${TOPIC^^}_Living_Report.md"
+# Use tr for uppercase (macOS compatible)
+TOPIC_UPPER=$(echo "$TOPIC" | tr '[:lower:]' '[:upper:]')
+LIVING_REPORT="$REPORTS_DIR/${TOPIC_UPPER}_Living_Report.md"
 if [ -f "$LIVING_REPORT" ]; then
     WORDS=$(wc -w < "$LIVING_REPORT" | tr -d '[:space:]')
     echo "  ✓ Living Report: $LIVING_REPORT ($WORDS words)" | tee -a "$LOG_FILE"

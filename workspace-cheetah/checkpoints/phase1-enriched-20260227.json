@@ -1,0 +1,118 @@
+{
+  "timestamp": "2026-02-27T08:09:03.856156",
+  "topic": "ai-llm",
+  "query": "ai-llm",
+  "total_found": 94278,
+  "projects": [
+    {
+      "name": "kght6123/skill-marketplace",
+      "display_name": "skill-marketplace",
+      "description": "Agent Skills marketplace for Claude Code and other AI coding tools",
+      "stars": 0,
+      "language": null,
+      "url": "https://github.com/kght6123/skill-marketplace",
+      "updated": "2026-02-27T16:08:26Z",
+      "created": "2026-02-27T13:46:47Z",
+      "readme": "Title: GitHub - kght6123/skill-marketplace: Agent Skills marketplace for Claude Code and other AI coding tools\n\nURL Source: http://github.com/kght6123/skill-marketplace\n\nMarkdown Content:\nGitHub - kght6123/skill-marketplace: Agent Skills marketplace for Claude Code and other AI coding tools\n===============\n\n[Skip to content](http://github.com/kght6123/skill-marketplace#start-of-content)\nNavigation Menu\n---------------\n\nToggle navigation\n\n[](http://github.com/)\n\n[Sign in](http://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fkght6123%2Fskill-marketplace)\n\nAppearance settings\n\n*   \nPlatform\n\n    *   \nAI CODE CREATION\n        *   [GitHub Copilot Write better code with AI](https://github.com/features/copilot)\n        *   [GitHub Spark Build and deploy intelligent apps](https://github.com/features/spark)\n        *   [GitHub Models Manage and compare prompts](https://github.com/features/models)\n        *   [MCP Registry New Integrate external tools](https://github.com/mcp)\n\n    *   \nDEVELOPER WORKFLOWS\n        *   [Actions Automate any workflow](https://github.com/features/actions)\n        *   [Codespaces Instant dev environments](https://github.com/features/codespaces)\n        *   [Issues Plan and track work](https://github.com/features/issues)\n        *   [Code Review Manage code changes](https://github.com/features/code-review)\n\n    *   \nAPPLICATION SECURITY\n        *   [GitHub Advanced Security Find and fix vulnerabilities](https://github.com/security/advanced-security)\n        *   [Code security Secure your code as you build](https://github.com/security/advanced-security/code-security)\n        *   [Secret protection Stop leaks before they start](https://github.com/security/advanced-security/secret-protection)\n\n    *   \nEXPLORE\n        *   [Why GitHub](https://github.com/why-github)\n        *   [Documentation](https://docs.github.com/)\n        *   [Blog](https://github.blog/)\n        *   [Changelog](https://github.blog/changelog)\n        *   [Marketplace](https"
+    },
+    {
+      "name": "shivsingh9555564990-ai/ToolsZera",
+      "display_name": "ToolsZera",
+      "description": "ToolsZera is an ai tools app.",
+      "stars": 0,
+      "language": "TypeScript",
+      "url": "https://github.com/shivsingh9555564990-ai/ToolsZera",
+      "updated": "2026-02-27T16:08:20Z",
+      "created": "2026-02-27T15:40:58Z",
+      "readme": "Title: GitHub - shivsingh9555564990-ai/ToolsZera: ToolsZera is an ai tools app.\n\nURL Source: http://github.com/shivsingh9555564990-ai/ToolsZera\n\nMarkdown Content:\n*   \n    *   \nAI CODE CREATION\n\n        *   [GitHub Copilot Write better code with AI](https://github.com/features/copilot)\n        *   [GitHub Spark Build and deploy intelligent apps](https://github.com/features/spark)\n        *   [GitHub Models Manage and compare prompts](https://github.com/features/models)\n        *   [MCP Registry New Integrate external tools](https://github.com/mcp)\n\n    *   \nDEVELOPER WORKFLOWS\n\n        *   [Actions Automate any workflow](https://github.com/features/actions)\n        *   [Codespaces Instant dev environments](https://github.com/features/codespaces)\n        *   [Issues Plan and track work](https://github.com/features/issues)\n        *   [Code Review Manage code changes](https://github.com/features/code-review)\n\n    *   \nAPPLICATION SECURITY\n\n        *   [GitHub Advanced Security Find and fix vulnerabilities](https://github.com/security/advanced-security)\n        *   [Code security Secure your code as you build](https://github.com/security/advanced-security/code-security)\n        *   [Secret protection Stop leaks before they start](https://github.com/security/advanced-security/secret-protection)\n\n    *   \nEXPLORE\n\n        *   [Why GitHub](https://github.com/why-github)\n        *   [Documentation](https://docs.github.com/)\n        *   [Blog](https://github.blog/)\n        *   [Changelog](https://github.blog/changelog)\n        *   [Marketplace](https://github.com/marketplace)\n\n[View all features](https://github.com/features)\n\n*   \n    *   \nBY COMPANY SIZE\n\n        *   [Enterprises](https://github.com/enterprise)\n        *   [Small and medium teams](https://github.com/team)\n        *   [Startups](https://github.com/enterprise/startups)\n        *   [Nonprofits](https://github.com/solutions/industry/nonprofits)\n\n    *   \nBY USE CASE\n\n        *   [App Modernization](https://git"
+    },
+    {
+      "name": "foundry-9/quilltap",
+      "display_name": "quilltap",
+      "description": "AI Chat with characters, memories, projects, tool use, and more",
+      "stars": 1,
+      "language": "TypeScript",
+      "url": "https://github.com/foundry-9/quilltap",
+      "updated": "2026-02-27T16:08:17Z",
+      "created": "2025-11-17T17:23:38Z",
+      "readme": "Title: GitHub - foundry-9/quilltap: AI Chat with characters, memories, projects, tool use, and more\n\nURL Source: http://github.com/foundry-9/quilltap\n\nMarkdown Content:\nQuilltap\n--------\n\n[](http://github.com/foundry-9/quilltap#quilltap)\n**Your AI, your projects, your stories, your partners, your rules.**\n\nQuilltap is a self-hosted AI workspace for writers, worldbuilders, roleplayers, and anyone who finds it deeply unsatisfying that their AI assistant forgets everything the moment they close a tab. Connect to any LLM provider, organize your work into projects with persistent files and context, create characters with genuine personalities, and build a private AI environment that learns, remembers, and \u2014 crucially \u2014 belongs entirely to you.\n\nNo subscriptions. No data harvested. No forgetting everything between sessions. No landlords.\n\n[![Image 1: License: MIT](https://camo.githubusercontent.com/08cef40a9105b6526ca22088bc514fbfdbc9aac1ddbf8d4e6c750e3a88a44dca/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d49542d626c75652e737667)](https://github.com/foundry-9/quilltap/blob/main/LICENSE)[![Image 2: Version](https://camo.githubusercontent.com/6a473f9e23026d1b088bfb43b70d4e1336050ce3b77c4d5b2c414f32004dc23a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f76657273696f6e2d332e312e302d2d6465762e33332d79656c6c6f772e737667)](https://github.com/foundry-9/quilltap/blob/main/package.json)\n\n[![Image 3: Welcome to Quilltap](https://camo.githubusercontent.com/d6f9fe2a3b2f13758b54d1d63f2a721d0973fdc7373f7e3a1a711c6d465b1212/68747470733a2f2f7175696c6c7461702e61692f696d616765732f77656c636f6d652d746f2d7175696c6c7461702d322d382e706e67)](https://camo.githubusercontent.com/d6f9fe2a3b2f13758b54d1d63f2a721d0973fdc7373f7e3a1a711c6d465b1212/68747470733a2f2f7175696c6c7461702e61692f696d616765732f77656c636f6d652d746f2d7175696c6c7461702d322d382e706e67)\n\n* * *\n\nWhat Quilltap Does\n------------------\n\n[](http://github.com/foundry-9/quilltap#what-quilltap-does)\n**"
+    },
+    {
+      "name": "Juan106720/Aimmy",
+      "display_name": "Aimmy",
+      "description": "Aimmy is a free, AI-based aim aligner developed by BabyHamsta and Nori to enhance gaming accessibility. Unlike similar tools, it utilizes DirectML, ONNX, and YOLOV8 technologies, and is written in C#, ensuring efficient performance even on AMD GPUs",
+      "stars": 14,
+      "language": null,
+      "url": "https://github.com/Juan106720/Aimmy",
+      "updated": "2026-02-27T16:08:13Z",
+      "created": "2025-03-20T18:47:44Z",
+      "readme": null
+    },
+    {
+      "name": "Cbarr32/siteguru",
+      "display_name": "siteguru",
+      "description": "Personal unified command center \u2014 email, music, social, dev tools, and AI agent sidekick in one dashboard. Built with Next.js, Railway, Vercel.",
+      "stars": 0,
+      "language": "TypeScript",
+      "url": "https://github.com/Cbarr32/siteguru",
+      "updated": "2026-02-27T16:07:36Z",
+      "created": "2026-02-27T03:49:33Z",
+      "readme": null
+    },
+    {
+      "name": "menonpg/menonlab-blog",
+      "display_name": "menonlab-blog",
+      "description": "Tech insights on AI, ML, and open-source tools",
+      "stars": 0,
+      "language": "Astro",
+      "url": "https://github.com/menonpg/menonlab-blog",
+      "updated": "2026-02-27T16:07:24Z",
+      "created": "2026-02-17T06:47:47Z",
+      "readme": null
+    },
+    {
+      "name": "deangrant/cursor-workspace",
+      "display_name": "cursor-workspace",
+      "description": "Reusable Cursor rules and agent skills for consistent, AI-assisted coding and domain guidance across projects.",
+      "stars": 0,
+      "language": null,
+      "url": "https://github.com/deangrant/cursor-workspace",
+      "updated": "2026-02-27T16:07:17Z",
+      "created": "2026-01-30T04:05:58Z",
+      "readme": null
+    },
+    {
+      "name": "thealxlabs/conductor",
+      "display_name": "conductor",
+      "description": "AI integration hub \u2014 25 plugins, 146 tools. Connect Claude, GPT-4o, Gemini & Ollama to Gmail, Spotify, GitHub Actions, Vercel, n8n, Notion and more. One installer. MCP + Telegram.",
+      "stars": 0,
+      "language": "TypeScript",
+      "url": "https://github.com/thealxlabs/conductor",
+      "updated": "2026-02-27T16:07:14Z",
+      "created": "2026-02-17T13:32:12Z",
+      "readme": null
+    },
+    {
+      "name": "jlcodes99/cockpit-tools",
+      "display_name": "cockpit-tools",
+      "description": "\ud83d\ude80 \u901a\u7528 AI IDE \u8d26\u53f7\u7ba1\u7406\u5de5\u5177\uff1a\u652f\u6301 Antigravity / Codex / GitHub Copilot / Windsurf / Kiro\uff0c\u591a\u8d26\u53f7\u5207\u6362\u3001\u914d\u989d\u76d1\u63a7\u3001\u81ea\u52a8\u5524\u9192\u4e0e\u591a\u5f00\u5b9e\u4f8b\u7ba1\u7406\u3002  \ud83d\ude80 Universal AI IDE account manager for Antigravity / Codex / GitHub Copilot / Windsurf / Kiro, with multi-account switching, quota monitoring, wake-up automation, and multi-instance management.",
+      "stars": 776,
+      "language": "Rust",
+      "url": "https://github.com/jlcodes99/cockpit-tools",
+      "updated": "2026-02-27T16:08:36Z",
+      "created": "2026-01-16T07:09:32Z",
+      "readme": null
+    },
+    {
+      "name": "ppbrown/ai-training",
+      "display_name": "ai-training",
+      "description": "Tools for training certain AI models",
+      "stars": 5,
+      "language": "Python",
+      "url": "https://github.com/ppbrown/ai-training",
+      "updated": "2026-02-27T16:06:56Z",
+      "created": "2025-07-25T15:26:27Z",
+      "readme": null
+    }
+  ]
+}

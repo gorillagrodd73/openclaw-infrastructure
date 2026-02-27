@@ -6,6 +6,7 @@ Handles deduplication, updates, and accumulation of research findings
 
 import json
 import os
+import sys
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Any, Optional
@@ -31,9 +32,19 @@ def load_knowledge(topic: str) -> Dict:
     filepath = KNOWLEDGE_DIR / f"{topic}.json"
     if filepath.exists():
         with open(filepath, 'r') as f:
-            return json.load(f)
+            knowledge = json.load(f)
+        # Normalize projects to dict format (handles legacy list format)
+        projects = knowledge.get('projects', [])
+        if isinstance(projects, list):
+            knowledge['projects'] = {
+                normalize_project_name(p.get('name', '')): p 
+                for p in projects 
+                if p.get('name')
+            }
+        return knowledge
     return {
         "topic": topic,
+        "description": f"Research findings for {topic}",
         "totalFindings": 0,
         "firstCreated": datetime.now().isoformat(),
         "lastUpdated": datetime.now().isoformat(),
@@ -189,6 +200,12 @@ def process_daily_research(topic: str, research_data: Dict) -> Dict:
     Returns summary of what was added/updated.
     """
     knowledge = load_knowledge(topic)
+    
+    # Ensure projects is a dict
+    projects = knowledge.get('projects', [])
+    if isinstance(projects, list):
+        knowledge['projects'] = {}
+    
     new_count = 0
     updated_count = 0
     
@@ -219,19 +236,8 @@ def process_daily_research(topic: str, research_data: Dict) -> Dict:
         'knowledgeFile': str(KNOWLEDGE_DIR / f"{topic}.json")
     }
 
-if __name__ == "__main__":
-    import sys
-    if len(sys.argv) < 2:
-        print("Usage: python3 knowledge_manager.py <topic>")
-        print("  topic: ai-dm, vtt, devtools, ai-llm")
-        sys.exit(1)
-    
-    topic = sys.argv[1]
-    knowledge = load_knowledge(topic)
-    print(f"Knowledge base for '{topic}':
 def process_stdin(topic: str):
     """Process research JSON from stdin and update knowledge base."""
-    import sys
     try:
         data = json.load(sys.stdin)
         summary = process_daily_research(topic, data)
@@ -240,9 +246,9 @@ def process_stdin(topic: str):
         print(f"Error processing stdin: {e}", file=sys.stderr)
         sys.exit(1)
 
-# Update main block for argparse
-if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1].startswith("-"):
+if __name__ == "__main__":
     import argparse
+
     parser = argparse.ArgumentParser(description="Cheetah Knowledge Base Manager")
     parser.add_argument("topic", nargs="?", choices=["ai-dm", "vtt", "devtools", "ai-llm"],
                        help="Topic to process")
@@ -253,12 +259,22 @@ if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1].startswith("-"):
     
     args = parser.parse_args()
     
-    if args.process_stdin and args.topic:
+    if not args.topic:
+        parser.print_help()
+        sys.exit(1)
+    
+    if args.process_stdin:
         process_stdin(args.topic)
-    elif args.stats and args.topic:
+    elif args.stats:
         knowledge = load_knowledge(args.topic)
         projects = knowledge.get('projects', {})
         print(f"\n📊 {args.topic.upper()} Knowledge Base:")
         print(f"   Total projects: {len(projects)}")
         print(f"   First created: {knowledge.get('firstCreated', 'N/A')}")
         print(f"   Last updated: {knowledge.get('lastUpdated', 'N/A')}")
+    else:
+        # Default: just load and show status
+        knowledge = load_knowledge(args.topic)
+        projects = knowledge.get('projects', {})
+        print(f"Knowledge base for '{args.topic}': {len(projects)} projects")
+        sys.exit(0)

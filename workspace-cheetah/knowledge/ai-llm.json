@@ -1,10 +1,161 @@
 {
   "topic": "AI-LLM",
   "description": "AI Models, Local LLMs, and Language Model Tools",
-  "totalFindings": 0,
+  "totalFindings": 10,
   "firstCreated": "2026-02-26",
-  "lastUpdated": "2026-02-26",
-  "projects": [],
+  "lastUpdated": "2026-02-27T08:09:03.928472",
+  "projects": {
+    "skill-marketplace": {
+      "name": "skill-marketplace",
+      "displayName": "kght6123/skill-marketplace",
+      "description": "Agent Skills marketplace for Claude Code and other AI coding tools",
+      "stars": 0,
+      "language": null,
+      "url": "https://github.com/kght6123/skill-marketplace",
+      "tags": [],
+      "firstSeen": "2026-02-27",
+      "lastSeen": "2026-02-27",
+      "seenCount": 1,
+      "sources": [
+        "github"
+      ]
+    },
+    "toolszera": {
+      "name": "toolszera",
+      "displayName": "shivsingh9555564990-ai/ToolsZera",
+      "description": "ToolsZera is an ai tools app.",
+      "stars": 0,
+      "language": "TypeScript",
+      "url": "https://github.com/shivsingh9555564990-ai/ToolsZera",
+      "tags": [],
+      "firstSeen": "2026-02-27",
+      "lastSeen": "2026-02-27",
+      "seenCount": 1,
+      "sources": [
+        "github"
+      ]
+    },
+    "quilltap": {
+      "name": "quilltap",
+      "displayName": "foundry-9/quilltap",
+      "description": "AI Chat with characters, memories, projects, tool use, and more",
+      "stars": 1,
+      "language": "TypeScript",
+      "url": "https://github.com/foundry-9/quilltap",
+      "tags": [],
+      "firstSeen": "2026-02-27",
+      "lastSeen": "2026-02-27",
+      "seenCount": 1,
+      "sources": [
+        "github"
+      ]
+    },
+    "aimmy": {
+      "name": "aimmy",
+      "displayName": "Juan106720/Aimmy",
+      "description": "Aimmy is a free, AI-based aim aligner developed by BabyHamsta and Nori to enhance gaming accessibility. Unlike similar tools, it utilizes DirectML, ONNX, and YOLOV8 technologies, and is written in C#, ensuring efficient performance even on AMD GPUs",
+      "stars": 14,
+      "language": null,
+      "url": "https://github.com/Juan106720/Aimmy",
+      "tags": [],
+      "firstSeen": "2026-02-27",
+      "lastSeen": "2026-02-27",
+      "seenCount": 1,
+      "sources": [
+        "github"
+      ]
+    },
+    "siteguru": {
+      "name": "siteguru",
+      "displayName": "Cbarr32/siteguru",
+      "description": "Personal unified command center \u2014 email, music, social, dev tools, and AI agent sidekick in one dashboard. Built with Next.js, Railway, Vercel.",
+      "stars": 0,
+      "language": "TypeScript",
+      "url": "https://github.com/Cbarr32/siteguru",
+      "tags": [],
+      "firstSeen": "2026-02-27",
+      "lastSeen": "2026-02-27",
+      "seenCount": 1,
+      "sources": [
+        "github"
+      ]
+    },
+    "menonlab-blog": {
+      "name": "menonlab-blog",
+      "displayName": "menonpg/menonlab-blog",
+      "description": "Tech insights on AI, ML, and open-source tools",
+      "stars": 0,
+      "language": "Astro",
+      "url": "https://github.com/menonpg/menonlab-blog",
+      "tags": [],
+      "firstSeen": "2026-02-27",
+      "lastSeen": "2026-02-27",
+      "seenCount": 1,
+      "sources": [
+        "github"
+      ]
+    },
+    "cursor-workspace": {
+      "name": "cursor-workspace",
+      "displayName": "deangrant/cursor-workspace",
+      "description": "Reusable Cursor rules and agent skills for consistent, AI-assisted coding and domain guidance across projects.",
+      "stars": 0,
+      "language": null,
+      "url": "https://github.com/deangrant/cursor-workspace",
+      "tags": [],
+      "firstSeen": "2026-02-27",
+      "lastSeen": "2026-02-27",
+      "seenCount": 1,
+      "sources": [
+        "github"
+      ]
+    },
+    "conductor": {
+      "name": "conductor",
+      "displayName": "thealxlabs/conductor",
+      "description": "AI integration hub \u2014 25 plugins, 146 tools. Connect Claude, GPT-4o, Gemini & Ollama to Gmail, Spotify, GitHub Actions, Vercel, n8n, Notion and more. One installer. MCP + Telegram.",
+      "stars": 0,
+      "language": "TypeScript",
+      "url": "https://github.com/thealxlabs/conductor",
+      "tags": [],
+      "firstSeen": "2026-02-27",
+      "lastSeen": "2026-02-27",
+      "seenCount": 1,
+      "sources": [
+        "github"
+      ]
+    },
+    "cockpit-tools": {
+      "name": "cockpit-tools",
+      "displayName": "jlcodes99/cockpit-tools",
+      "description": "\ud83d\ude80 \u901a\u7528 AI IDE \u8d26\u53f7\u7ba1\u7406\u5de5\u5177\uff1a\u652f\u6301 Antigravity / Codex / GitHub Copilot / Windsurf / Kiro\uff0c\u591a\u8d26\u53f7\u5207\u6362\u3001\u914d\u989d\u76d1\u63a7\u3001\u81ea\u52a8\u5524\u9192\u4e0e\u591a\u5f00\u5b9e\u4f8b\u7ba1\u7406\u3002  \ud83d\ude80 Universal AI IDE account manager for Antigravity / Codex / GitHub Copilot / Windsurf / Kiro, with multi-account switching, quota monitoring, wake-up automation, and multi-instance management.",
+      "stars": 776,
+      "language": "Rust",
+      "url": "https://github.com/jlcodes99/cockpit-tools",
+      "tags": [],
+      "firstSeen": "2026-02-27",
+      "lastSeen": "2026-02-27",
+      "seenCount": 1,
+      "sources": [
+        "github"
+      ]
+    },
+    "ai-training": {
+      "name": "ai-training",
+      "displayName": "ppbrown/ai-training",
+      "description": "Tools for training certain AI models",
+      "stars": 5,
+      "language": "Python",
+      "url": "https://github.com/ppbrown/ai-training",
+      "tags": [],
+      "firstSeen": "2026-02-27",
+      "lastSeen": "2026-02-27",
+      "seenCount": 1,
+      "sources": [
+        "github"
+      ]
+    }
+  },
   "trends": [],
   "recommendations": [],
   "sources": {
