@@ -229,3 +229,36 @@ if __name__ == "__main__":
     topic = sys.argv[1]
     knowledge = load_knowledge(topic)
     print(f"Knowledge base for '{topic}':
+def process_stdin(topic: str):
+    """Process research JSON from stdin and update knowledge base."""
+    import sys
+    try:
+        data = json.load(sys.stdin)
+        summary = process_daily_research(topic, data)
+        print(json.dumps(summary, indent=2))
+    except Exception as e:
+        print(f"Error processing stdin: {e}", file=sys.stderr)
+        sys.exit(1)
+
+# Update main block for argparse
+if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1].startswith("-"):
+    import argparse
+    parser = argparse.ArgumentParser(description="Cheetah Knowledge Base Manager")
+    parser.add_argument("topic", nargs="?", choices=["ai-dm", "vtt", "devtools", "ai-llm"],
+                       help="Topic to process")
+    parser.add_argument("--process-stdin", action="store_true",
+                       help="Read research JSON from stdin")
+    parser.add_argument("--stats", action="store_true",
+                       help="Show statistics")
+    
+    args = parser.parse_args()
+    
+    if args.process_stdin and args.topic:
+        process_stdin(args.topic)
+    elif args.stats and args.topic:
+        knowledge = load_knowledge(args.topic)
+        projects = knowledge.get('projects', {})
+        print(f"\n📊 {args.topic.upper()} Knowledge Base:")
+        print(f"   Total projects: {len(projects)}")
+        print(f"   First created: {knowledge.get('firstCreated', 'N/A')}")
+        print(f"   Last updated: {knowledge.get('lastUpdated', 'N/A')}")

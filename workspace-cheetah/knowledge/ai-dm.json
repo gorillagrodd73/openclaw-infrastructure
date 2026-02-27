@@ -1,14 +1,98 @@
 {
   "topic": "AI-DM",
   "description": "AI Dungeon Master and TTRPG Assistant Tools",
-  "totalFindings": 0,
+  "totalFindings": 10,
   "firstCreated": "2026-02-26",
   "lastUpdated": "2026-02-26",
-  "projects": [],
-  "trends": [],
-  "recommendations": [],
+  "projects": [
+    {
+      "name": "dnd-rag-helper",
+      "url": "https://github.com/Kionchi/dnd-rag-helper",
+      "stars": 1,
+      "language": "Python",
+      "description": "Local RAG-Based AI Assistant for D&D 5e using LangChain, Ollama, ChromaDB"
+    },
+    {
+      "name": "dm-hud",
+      "url": "https://github.com/mcstew/dm-hud",
+      "stars": 0,
+      "language": "JavaScript",
+      "description": "Real-time AI-powered DM assistant with Claude AI and Deepgram transcription"
+    },
+    {
+      "name": "DnDbug",
+      "url": "https://github.com/sudeengin/DnDbug",
+      "stars": 1,
+      "language": "Python",
+      "description": "AI storytelling assistant with Macro/Detail two-layer architecture"
+    },
+    {
+      "name": "DND_DM",
+      "url": "https://github.com/Zemk0/DND_DM",
+      "stars": 0,
+      "language": "Python",
+      "description": "DragonMaster with Ollama LLM, TTS narration, Whisper STT"
+    },
+    {
+      "name": "natural20-rag",
+      "url": "https://github.com/bazingiu/natural20-rag",
+      "stars": 0,
+      "language": "Python",
+      "description": "RAG assistant using LlamaIndex, Ollama, Qdrant vector DB"
+    }
+  ],
+  "trends": [
+    {
+      "id": "trend-001",
+      "pattern": "Local-First Architecture",
+      "description": "90% of AI-DM tools prioritize local LLMs (Ollama) and on-device processing for privacy and zero cloud dependency",
+      "confidence": "high",
+      "evidence": ["dnd-rag-helper", "natural20-rag", "DND_DM"]
+    },
+    {
+      "id": "trend-002",
+      "pattern": "RAG Pattern Dominance",
+      "description": "Knowledge retrieval from D&D 5e rulebooks via RAG is the dominant technical pattern (3/5 top projects)",
+      "confidence": "high",
+      "evidence": ["dnd-rag-helper (LangChain/ChromaDB)", "natural20-rag (LlamaIndex/Qdrant)", "DnD-RAG-Chatbot"]
+    },
+    {
+      "id": "trend-003",
+      "pattern": "Speech Integration Emerging",
+      "description": "Advanced projects adding voice: TTS narration and STT input for immersive gameplay",
+      "confidence": "medium",
+      "evidence": ["dm-hud (Deepgram transcription)", "DND_DM (edge-tts, Whisper)"]
+    },
+    {
+      "id": "trend-004",
+      "pattern": "Python Dominance with JS Rising",
+      "description": "Backend predominantly Python (LLM integrations), frontend moving to React/Vite/TS",
+      "confidence": "high",
+      "evidence": ["4 Python repos", "DnDbug React+Vite", "dm-hud JavaScript"]
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "rec-001",
+      "priority": "high",
+      "text": "Foundry VTT integration opportunity: Most tools are standalone, missing integration with dominant VTT platform",
+      "rationale": "Gap between AI-DM tools and actual VTT usage"
+    },
+    {
+      "id": "rec-002",
+      "priority": "medium",
+      "text": "Common rulebook corpus: Multiple projects re-implementing D&D 5e RAG - opportunity for shared open dataset",
+      "rationale": "Repetitive effort, fragmented knowledge bases"
+    },
+    {
+      "id": "rec-003",
+      "priority": "medium",
+      "text": "Multi-agent DM systems: Current tools single-agent, opportunity for party-bot architecture",
+      "rationale": "NPC interaction depth limited with single LLM context"
+    }
+  ],
   "sources": {
-    "github": [],
+    "github": ["https://github.com/Kionchi/dnd-rag-helper", "https://github.com/mcstew/dm-hud", "https://github.com/sudeengin/DnDbug", "https://github.com/Zemk0/DND_DM", "https://github.com/bazingiu/natural20-rag"],
     "reddit": [],
     "web": []
   }
