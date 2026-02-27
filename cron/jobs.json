@@ -16,7 +16,7 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "You are Riddler. Process Cheetah's Option C research output:\n\nExecute: /Users/chimpman/.openclaw/workspace-riddler/workflow/digest-research.sh\n\nThe script will:\n1. Look for today's Daily Summary: workspace-cheetah/reports/daily_summaries/<TOPIC>_YYYY-MM-DD.md\n2. If not found, use Living Report: workspace-cheetah/reports/<TOPIC>_Living_Report.md\n3. If neither, use Knowledge Base JSON\n4. Generate structured digest with pattern analysis\n5. Save to workspace-riddler/reports/digests/\n\nFor manual debugging:\n- Check today's topic matches (Mon/Fri=ai-llm, Tue=devtools, Wed=vtt, Thu=ai-dm)\n- Verify Cheetah Phase 3 completed successfully\n- Check phase3 completed and saved daily_summary before 23:00\n\nReport: digest path, source type used, key insights count.",
+        "message": "You are Riddler. Run the project-aware digest generator:\n\npython3 /Users/chimpman/.openclaw/lib/riddler/project-digest.py\n\nThis iterates through /Users/chimpman/Projects/, finds Cheetah outputs (.ai/cheetah/output/knowledge.json), and generates per-project digests.\n\nTIME LIMIT: 15 minutes\n\nReport: projects digested, findings summary.",
         "model": "nvidia-nim/moonshotai/kimi-k2.5"
       },
       "delivery": {
@@ -75,7 +75,7 @@
       "name": "Brainiac OpenClaw System Health",
       "enabled": true,
       "createdAtMs": 1772042858373,
-      "updatedAtMs": 1772194001415,
+      "updatedAtMs": 1772208722989,
       "schedule": {
         "kind": "cron",
         "expr": "0 */4 * * *",
@@ -94,11 +94,11 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": 1772208123930,
-        "lastRunAtMs": 1772193904432,
+        "nextRunAtMs": 1772222523930,
+        "lastRunAtMs": 1772208370734,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 96983,
+        "lastDurationMs": 352255,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -110,7 +110,7 @@
       "name": "Grodd Daily Standup",
       "enabled": true,
       "createdAtMs": 1772051023962,
-      "updatedAtMs": 1772155100000,
+      "updatedAtMs": 1772212183111,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * *"
@@ -128,14 +128,14 @@
         "to": "1475159106800062594"
       },
       "state": {
-        "nextRunAtMs": 1772211600000,
-        "lastRunAtMs": 1772125200011,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 461302,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "nextRunAtMs": 1772298000000,
+        "lastRunAtMs": 1772211600010,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 583101,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "cron announce delivery failed"
       }
     },
     {
@@ -151,10 +151,10 @@
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
-      "runTimeoutSeconds": 900,
+      "runTimeoutSeconds": 1800,
       "payload": {
         "kind": "agentTurn",
-        "message": "You are Cheetah (Phase 1: Researcher). PROCEDURAL WORKFLOW:\n\nExecute this SINGLE command:\n\nbash /Users/chimpman/.openclaw/workspace-cheetah/workflow/procedural-phase1.sh\n\nThat's it. The script handles all GitHub API calls, README enrichment, and knowledge base updates.\n\nYour only job:\n1. Run the script above (takes ~3 minutes)\n2. Read the log file it outputs\n3. Report completion status\n\nTIME LIMIT: 5 minutes (streamlined)\n\nReport: repos found, knowledge base file path, status.",
+        "message": "You are Cheetah. Run the project-aware research runner:\n\npython3 /Users/chimpman/.openclaw/lib/cheetah/project-runner.py\n\nThis iterates through /Users/chimpman/Projects/, finds .ai/cheetah/instructions.json in each, and runs research for configured topics.\n\nTIME LIMIT: 30 minutes\n\nReport: projects found, topics researched, results summary.",
         "model": "nvidia-nim/moonshotai/kimi-k2.5"
       },
       "delivery": {
@@ -179,7 +179,7 @@
       "name": "Grundy Heartbeat",
       "enabled": true,
       "createdAtMs": 1772055717252,
-      "updatedAtMs": 1772204753847,
+      "updatedAtMs": 1772212620589,
       "schedule": {
         "kind": "cron",
         "expr": "0 * * * *",
@@ -198,11 +198,11 @@
         "to": "1474821794686042354"
       },
       "state": {
-        "nextRunAtMs": 1772208016692,
-        "lastRunAtMs": 1772204416698,
+        "nextRunAtMs": 1772215216692,
+        "lastRunAtMs": 1772212183141,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 337149,
+        "lastDurationMs": 437448,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
