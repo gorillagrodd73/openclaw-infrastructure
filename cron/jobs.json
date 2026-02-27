@@ -75,7 +75,7 @@
       "name": "Brainiac OpenClaw System Health",
       "enabled": true,
       "createdAtMs": 1772042858373,
-      "updatedAtMs": 1772136579807,
+      "updatedAtMs": 1772150952945,
       "schedule": {
         "kind": "cron",
         "expr": "0 */4 * * *",
@@ -94,11 +94,11 @@
         "to": "1472435146488545280"
       },
       "state": {
-        "nextRunAtMs": 1772150523930,
-        "lastRunAtMs": 1772136427171,
+        "nextRunAtMs": 1772164923930,
+        "lastRunAtMs": 1772150523941,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 152636,
+        "lastDurationMs": 429004,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
@@ -144,7 +144,7 @@
       "name": "Cheetah Research",
       "enabled": true,
       "createdAtMs": 1772052292352,
-      "updatedAtMs": 1772147582175,
+      "updatedAtMs": 1772153233000,
       "schedule": {
         "kind": "cron",
         "expr": "0 22 * * *"
@@ -153,7 +153,7 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "You are Cheetah performing 0-cost research. Follow these EXACT steps using tools:\n\nSTEP 1: Determine today's topic based on day of week (Mon=AI/LLM, Tue=DevTools, Wed=VTT, Thu=AI-DM).\n\nSTEP 2: Use exec tool to search Reddit API:\ncurl -sL --max-time 20 -A 'Mozilla/5.0' 'https://www.reddit.com/r/LocalLLaMA/top.json?limit=25&t=week' | jq -r '.data.children[].data.url'\n(Use appropriate subreddit for today's topic)\n\nSTEP 3: Use exec tool to search GitHub API:\ncurl -sL --max-time 20 -A 'Mozilla/5.0' 'https://api.github.com/search/repositories?q=ai+dungeon+master&sort=updated'\n\nSTEP 4: Use web_fetch tool to extract content from each interesting URL found. Use Jina AI endpoint: https://r.jina.ai/http://URL\n\nSTEP 5: Generate markdown report with: Executive Summary, Trending Discussions, New Tools, Actionable Recommendations.\n\nSTEP 6: Save report to /Users/chimpman/.openclaw/workspace/agents/cheetah/output/[TOPIC]_[DATE]/report.md\n\nDO NOT use web_search. DO use exec and web_fetch tools explicitly. Report completion.",
+        "message": "You are Cheetah (Phase 1: Researcher). Execute cascade research workflow:\n\n1. Read /Users/chimpman/.openclaw/workspace-cheetah/tasks/phase1-researcher.md\n2. Gather data from GitHub API (20s timeout per call)\n3. Fetch top 5 repo details via web_fetch\n4. Save checkpoint to checkpoints/phase1-research.json\n\nThis is PHASE 1 of 3. You have 10 minutes. Work fast.\n\nAfter completion, this triggers Phase 2 (Analyzer).\n\nReport: file path, repo count, time elapsed.",
         "model": "nvidia-nim/moonshotai/kimi-k2.5"
       },
       "delivery": {
@@ -239,6 +239,66 @@
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "5c3cdbc7-4481-4215-afbc-d71966ce6493",
+      "agentId": "cheetah",
+      "name": "Cheetah Research - Phase 2 Analyzer",
+      "enabled": true,
+      "createdAtMs": 1772153233001,
+      "updatedAtMs": 1772153233001,
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 22 * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "You are Cheetah (Phase 2: Analyzer). Execute analysis workflow:\n\n1. Read /Users/chimpman/.openclaw/workspace-cheetah/tasks/phase2-analyzer.md\n2. Load checkpoint: checkpoints/phase1-research.json\n3. Extract trends, categorize projects, identify insights\n4. Save checkpoint to checkpoints/phase2-insights.md\n\nThis is PHASE 2 of 3. You have 10 minutes.\n\nIf Phase 1 checkpoint missing, report error and exit.\n\nReport: file path, insights count, time elapsed.",
+        "model": "nvidia-nim/moonshotai/kimi-k2.5"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last",
+        "to": "1472435146488545280"
+      },
+      "state": {
+        "nextRunAtMs": 1772172900000,
+        "lastRunAtMs": 0,
+        "lastRunStatus": "pending",
+        "lastStatus": "pending"
+      }
+    },
+    {
+      "id": "5c3cdbc7-4481-4215-afbc-d71966ce6494",
+      "agentId": "cheetah",
+      "name": "Cheetah Research - Phase 3 Writer",
+      "enabled": true,
+      "createdAtMs": 1772153233002,
+      "updatedAtMs": 1772153233002,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 22 * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "You are Cheetah (Phase 3: Writer). Execute report generation:\n\n1. Read /Users/chimpman/.openclaw/workspace-cheetah/tasks/phase3-writer.md\n2. Load checkpoint: checkpoints/phase2-insights.md\n3. Generate polished markdown report (500-800 words)\n4. Save to output/AI_DM_YYYY-MM-DD/report.md\n5. Verify file exists and word count >400\n6. Cleanup checkpoints/ directory\n\nThis is PHASE 3 of 3. Final phase.\n\nIf Phase 2 checkpoint missing, report error and exit.\n\nReport: final file path, word count, completion confirmation.",
+        "model": "nvidia-nim/moonshotai/kimi-k2.5"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last",
+        "to": "1472435146488545280"
+      },
+      "state": {
+        "nextRunAtMs": 1772173800000,
+        "lastRunAtMs": 0,
+        "lastRunStatus": "pending",
+        "lastStatus": "pending"
       }
     }
   ]
