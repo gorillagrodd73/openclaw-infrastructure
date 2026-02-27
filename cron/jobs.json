@@ -194,7 +194,7 @@
       "delivery": {
         "mode": "announce",
         "channel": "last",
-        "to": "1474823021440012521"
+        "to": "1474821794686042354"
       },
       "state": {
         "nextRunAtMs": 1772157616692,
@@ -277,7 +277,7 @@
       "name": "Cheetah Research - Phase 3 Writer",
       "enabled": true,
       "createdAtMs": 1772153233002,
-      "updatedAtMs": 1772155100000,
+      "updatedAtMs": 1772155500000,
       "schedule": {
         "kind": "cron",
         "expr": "30 22 * * *"

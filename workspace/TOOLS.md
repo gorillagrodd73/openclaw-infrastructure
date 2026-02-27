@@ -27,6 +27,11 @@ Add whatever helps you do your job. This is your cheat sheet.
 - Channel: cron-alerts
 - Purpose: All cron job status and errors
 
+**System Heartbeats:**
+- URL: `https://discord.com/api/webhooks/1474821867855417671/gGUzc-U5rP43dS6WJbG9Yi-Cdlyr5sODt_gUnUP4hPhhwRZPeM9gsvK-nkhOw3ZET7TI`
+- Channel: system-heartbeats
+- Purpose: Agent health checks and heartbeats
+
 ---
 
 ### Google Workspace (gog)
