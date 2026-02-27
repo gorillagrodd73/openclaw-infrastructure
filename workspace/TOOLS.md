@@ -89,4 +89,53 @@ python3 /Users/chimpman/.openclaw/workspace/memory/embedding-index/search.py "yo
 
 ---
 
+### Cheetah Research System (Option C - Hybrid)
+
+**Architecture:** Knowledge base + Living reports
+
+**Directories:**
+```
+workspace-cheetah/
+├── knowledge/              # JSON knowledge bases
+│   ├── ai-dm.json         # AI Dungeon Master tools
+│   ├── vtt.json           # Virtual Tabletop tools
+│   ├── devtools.json      # Developer tools
+│   └── ai-llm.json        # Local LLM tools
+├── reports/               # Generated markdown reports
+│   ├── ai-dm_Living_Report.md
+│   └── daily_summaries/
+│       └── ai-dm_2026-02-26.md
+└── scripts/               # Research automation
+    ├── knowledge_manager.py
+    ├── generate_report.py
+    └── research_github.py
+```
+
+**How it works:**
+1. **Phase 1 (Researcher):** Scrapes GitHub, adds to knowledge base (deduplicated)
+2. **Phase 2 (Analyzer):** Extracts trends, updates knowledge base metadata
+3. **Phase 3 (Writer):** Generates Living Report + Daily Summary
+
+**Manual commands:**
+```bash
+# Research a topic
+cd /Users/chimpman/.openclaw/workspace-cheetah
+python3 scripts/research_github.py ai-dm
+
+# Update knowledge base
+python3 scripts/knowledge_manager.py ai-dm
+
+# Generate reports
+python3 scripts/generate_report.py ai-dm --type living
+python3 scripts/generate_report.py ai-dm --type summary --output reports/daily_summaries/ai-dm_$(date +%Y-%m-%d).md
+```
+
+**Topics and schedule:**
+- Mon/Fri: AI-LLM
+- Tue: DevTools
+- Wed: VTT
+- Thu: AI-DM
+
+---
+
 Add whatever helps you do your job. This is your cheat sheet.
