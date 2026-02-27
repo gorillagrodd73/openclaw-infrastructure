@@ -7,7 +7,7 @@
       "name": "Riddler Digest",
       "enabled": true,
       "createdAtMs": 1772042350337,
-      "updatedAtMs": 1772148448470,
+      "updatedAtMs": 1772155100000,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *"
@@ -22,7 +22,7 @@
       "delivery": {
         "mode": "announce",
         "channel": "last",
-        "to": "1472435146488545280"
+        "to": "1474823021440012521"
       },
       "state": {
         "nextRunAtMs": 1772175600000,
@@ -41,7 +41,7 @@
       "name": "Daily Git Update",
       "enabled": true,
       "createdAtMs": 1772042351014,
-      "updatedAtMs": 1772144916380,
+      "updatedAtMs": 1772155100000,
       "schedule": {
         "kind": "cron",
         "expr": "30 23 * * *"
@@ -56,7 +56,7 @@
       "delivery": {
         "mode": "announce",
         "channel": "last",
-        "to": "1472435146488545280"
+        "to": "1474823021440012521"
       },
       "state": {
         "nextRunAtMs": 1772177400000,
@@ -75,7 +75,7 @@
       "name": "Brainiac OpenClaw System Health",
       "enabled": true,
       "createdAtMs": 1772042858373,
-      "updatedAtMs": 1772150952945,
+      "updatedAtMs": 1772155100000,
       "schedule": {
         "kind": "cron",
         "expr": "0 */4 * * *",
@@ -91,7 +91,7 @@
       "delivery": {
         "mode": "announce",
         "channel": "last",
-        "to": "1472435146488545280"
+        "to": "1474823021440012521"
       },
       "state": {
         "nextRunAtMs": 1772164923930,
@@ -110,7 +110,7 @@
       "name": "Grodd Daily Standup",
       "enabled": true,
       "createdAtMs": 1772051023962,
-      "updatedAtMs": 1772125661313,
+      "updatedAtMs": 1772155100000,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * *"
@@ -125,7 +125,7 @@
       "delivery": {
         "mode": "announce",
         "channel": "last",
-        "to": "1472435146488545280"
+        "to": "1475159106800062594"
       },
       "state": {
         "nextRunAtMs": 1772211600000,
@@ -144,7 +144,7 @@
       "name": "Cheetah Research",
       "enabled": true,
       "createdAtMs": 1772052292352,
-      "updatedAtMs": 1772152671174,
+      "updatedAtMs": 1772155100000,
       "schedule": {
         "kind": "cron",
         "expr": "0 22 * * *"
@@ -159,17 +159,17 @@
       "delivery": {
         "mode": "announce",
         "channel": "last",
-        "to": "1472435146488545280"
+        "to": "1474823021440012521"
       },
       "state": {
         "nextRunAtMs": 1772172000000,
-        "lastRunAtMs": 1772152157783,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 513391,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": true
+        "lastRunAtMs": 1772153534847,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 600035,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "Error: cron: job execution timed out"
       }
     },
     {
@@ -178,7 +178,7 @@
       "name": "Grundy Heartbeat",
       "enabled": true,
       "createdAtMs": 1772055717252,
-      "updatedAtMs": 1772148448470,
+      "updatedAtMs": 1772155100000,
       "schedule": {
         "kind": "cron",
         "expr": "0 * * * *",
@@ -194,7 +194,7 @@
       "delivery": {
         "mode": "announce",
         "channel": "last",
-        "to": "1472435146488545280"
+        "to": "1474823021440012521"
       },
       "state": {
         "nextRunAtMs": 1772157616692,
@@ -213,7 +213,7 @@
       "name": "Brainiac Agent Health Check",
       "enabled": true,
       "createdAtMs": 1772056418494,
-      "updatedAtMs": 1772100439978,
+      "updatedAtMs": 1772155100000,
       "schedule": {
         "kind": "cron",
         "expr": "0 2 * * *"
@@ -228,7 +228,7 @@
       "delivery": {
         "mode": "announce",
         "channel": "last",
-        "to": "1472435146488545280"
+        "to": "1474823021440012521"
       },
       "state": {
         "nextRunAtMs": 1772186400000,
@@ -247,7 +247,7 @@
       "name": "Cheetah Research - Phase 2 Analyzer",
       "enabled": true,
       "createdAtMs": 1772153233001,
-      "updatedAtMs": 1772153233001,
+      "updatedAtMs": 1772155100000,
       "schedule": {
         "kind": "cron",
         "expr": "15 22 * * *"
@@ -262,7 +262,7 @@
       "delivery": {
         "mode": "announce",
         "channel": "last",
-        "to": "1472435146488545280"
+        "to": "1474823021440012521"
       },
       "state": {
         "nextRunAtMs": 1772172900000,
@@ -277,7 +277,7 @@
       "name": "Cheetah Research - Phase 3 Writer",
       "enabled": true,
       "createdAtMs": 1772153233002,
-      "updatedAtMs": 1772153233002,
+      "updatedAtMs": 1772155100000,
       "schedule": {
         "kind": "cron",
         "expr": "30 22 * * *"
@@ -292,7 +292,7 @@
       "delivery": {
         "mode": "announce",
         "channel": "last",
-        "to": "1472435146488545280"
+        "to": "1474823021440012521"
       },
       "state": {
         "nextRunAtMs": 1772173800000,
