@@ -41,7 +41,7 @@
       "name": "Daily Git Update",
       "enabled": true,
       "createdAtMs": 1772042351014,
-      "updatedAtMs": 1772155100000,
+      "updatedAtMs": 1772177586322,
       "schedule": {
         "kind": "cron",
         "expr": "30 23 * * *"
@@ -59,15 +59,14 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": 1772177400000,
-        "lastRunAtMs": 1772144833327,
+        "nextRunAtMs": 1772263800000,
+        "lastRunAtMs": 1772177400013,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 83053,
+        "lastDurationMs": 186309,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "lastDelivered": true,
-        "runningAtMs": 1772177400011
+        "lastDelivered": true
       }
     },
     {
@@ -76,7 +75,7 @@
       "name": "Brainiac OpenClaw System Health",
       "enabled": true,
       "createdAtMs": 1772042858373,
-      "updatedAtMs": 1772170545614,
+      "updatedAtMs": 1772194001415,
       "schedule": {
         "kind": "cron",
         "expr": "0 */4 * * *",
@@ -95,11 +94,11 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": 1772179323930,
-        "lastRunAtMs": 1772170367489,
+        "nextRunAtMs": 1772208123930,
+        "lastRunAtMs": 1772193904432,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 178125,
+        "lastDurationMs": 96983,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -155,7 +154,7 @@
       "runTimeoutSeconds": 900,
       "payload": {
         "kind": "agentTurn",
-        "message": "You are Cheetah (Phase 1: Researcher). OPTION C WORKFLOW:\n\n1. Read /Users/chimpman/.openclaw/workspace-cheetah/tasks/phase1-researcher.md\n2. Execute research_github.py <TOPIC> (fetches GitHub data + updates knowledge base)\n3. Verify knowledge/<TOPIC>.json was updated\n4. Report completion\n\nTIME LIMIT: 15 minutes\n\nThis phase runs independently. Phase 2 (Analyzer) runs at 22:15 via separate cron job.\n\nReport: repos found, knowledge base status, completion time.",
+        "message": "You are Cheetah (Phase 1: Researcher). PROCEDURAL WORKFLOW:\n\nExecute this SINGLE command:\n\nbash /Users/chimpman/.openclaw/workspace-cheetah/workflow/procedural-phase1.sh\n\nThat's it. The script handles all GitHub API calls, README enrichment, and knowledge base updates.\n\nYour only job:\n1. Run the script above (takes ~3 minutes)\n2. Read the log file it outputs\n3. Report completion status\n\nTIME LIMIT: 5 minutes (streamlined)\n\nReport: repos found, knowledge base file path, status.",
         "model": "nvidia-nim/moonshotai/kimi-k2.5"
       },
       "delivery": {
@@ -180,7 +179,7 @@
       "name": "Grundy Heartbeat",
       "enabled": true,
       "createdAtMs": 1772055717252,
-      "updatedAtMs": 1772176231557,
+      "updatedAtMs": 1772204753847,
       "schedule": {
         "kind": "cron",
         "expr": "0 * * * *",
@@ -199,11 +198,11 @@
         "to": "1474821794686042354"
       },
       "state": {
-        "nextRunAtMs": 1772179216692,
-        "lastRunAtMs": 1772175891968,
+        "nextRunAtMs": 1772208016692,
+        "lastRunAtMs": 1772204416698,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 339589,
+        "lastDurationMs": 337149,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -215,7 +214,7 @@
       "name": "Brainiac Agent Health Check",
       "enabled": true,
       "createdAtMs": 1772056418494,
-      "updatedAtMs": 1772171629744,
+      "updatedAtMs": 1772186562233,
       "schedule": {
         "kind": "cron",
         "expr": "0 2 * * *"
@@ -233,11 +232,11 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": 1772186400000,
-        "lastRunAtMs": 1772171372074,
+        "nextRunAtMs": 1772272800000,
+        "lastRunAtMs": 1772186400013,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 257670,
+        "lastDurationMs": 162220,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
@@ -294,7 +293,7 @@
       "runTimeoutSeconds": 900,
       "payload": {
         "kind": "agentTurn",
-        "message": "You are Cheetah (Phase 3: Writer). OPTION C WORKFLOW:\n\n1. Read /Users/chimpman/.openclaw/workspace-cheetah/tasks/phase3-writer.md\n2. Load knowledge/<TOPIC>.json (complete data)\n3. Run scripts/generate_report.py <TOPIC> --type living\n4. Run scripts/generate_report.py <TOPIC> --type summary\n5. Verify both reports exist (>400 words)\n6. Commit reports to git\n7. Clean up phase2 checkpoint\n\nTIME LIMIT: 15 minutes\n\nThis is FINAL PHASE of daily cascade.\n\nReport: Living Report path, Daily Summary path, word counts, git commit status.",
+        "message": "You are Cheetah (Phase 3: Writer). PROCEDURAL WORKFLOW:\n\nExecute this SINGLE command:\n\nbash /Users/chimpman/.openclaw/workspace-cheetah/workflow/procedural-phase3.sh\n\nThat's it. The script handles all report generation, git commits, and cleanup.\n\nYour only job:\n1. Run the script above (takes ~2 minutes)\n2. Verify reports were created\n3. Report completion status\n\nTIME LIMIT: 5 minutes (streamlined)\n\nReport: Living Report path, Daily Summary path, word counts, git status.",
         "model": "nvidia-nim/moonshotai/kimi-k2.5"
       },
       "delivery": {
