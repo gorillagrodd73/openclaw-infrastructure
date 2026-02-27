@@ -5,6 +5,7 @@ Iterates through projects and generates digests from Cheetah outputs.
 """
 import json
 import os
+import re
 from datetime import datetime
 from pathlib import Path
 
@@ -32,10 +33,61 @@ def load_cheetah_knowledge(project_path):
             return json.load(f)
     return None
 
+def extract_expansion_suggestions(projects):
+    """Analyze projects and suggest expansion queries."""
+    suggestions = []
+    entities_seen = set()
+    
+    # Look for product names / systems in repo names and descriptions
+    for p in projects[:15]:  # Check top 15
+        name = p.get('name', '').lower()
+        desc = p.get('description', '').lower()
+        full_name = p.get('display_name', '')
+        
+        # Extract potential entities (capitalized proper nouns, known systems)
+        # Patterns: product names, TTRPG systems, VTT platforms
+        patterns = [
+            (r'foundry', 'Foundry VTT', f'Foundry VTT OR Foundry system OR Foundry module'),
+            (r'roll20', 'Roll20', f'Roll20 OR Roll20 API OR Roll20 scripts'),
+            (r'lancer', 'Lancer RPG', f'Lancer RPG OR Lancer foundry OR Mech RPG'),
+            (r'ose|old school', 'OSE', f'OSE OR Old School Essentials OR B/X'),
+            (r'becmi', 'BECMI', f'BECMI OR Basic D&D OR Rules Cyclopedia'),
+            (r'5e|dnd 5', 'D&D 5E', f'DND 5E OR 5e tools OR fifth edition'),
+            (r'combat|initiative', 'Combat System', f'ttrpg combat OR initiative tracker OR battle manager'),
+            (r'character.*sheet|char.*gen', 'Character Tools', f'dnd character generator OR character builder'),
+        ]
+        
+        for pattern, entity_name, query in patterns:
+            if pattern in name or pattern in desc:
+                if entity_name not in entities_seen:
+                    entities_seen.add(entity_name)
+                    suggestions.append({
+                        "id": entity_name.lower().replace(' ', '-').replace('/', '-'),
+                        "name": entity_name,
+                        "query": query,
+                        "depth": 1,
+                        "reason": f"found in '{full_name}'",
+                        "source": pattern
+                    })
+                    break  # Just one per repo
+    
+    # Limit to max 5 suggestions
+    return suggestions[:5]
+
+def generate_expansion_queue(suggestions):
+    """Generate expansion queue JSON for Cheetah."""
+    if not suggestions:
+        return json.dumps([], indent=2)
+    return json.dumps(suggestions, indent=2)
+
 def generate_digest(project_path, cheetah_data, instructions):
     """Generate a digest for a project."""
     date_str = datetime.now().strftime('%Y-%m-%d')
     projects = cheetah_data.get("projects", [])
+    
+    # Generate expansion suggestions
+    expansion_suggestions = extract_expansion_suggestions(projects)
+    expansion_json = generate_expansion_queue(expansion_suggestions)
     
     lines = [
         f"# Riddler Digest - {project_path.name}",
@@ -64,10 +116,29 @@ def generate_digest(project_path, cheetah_data, instructions):
     else:
         lines.append("_No new discoveries today._")
     
+    # Add expansion suggestions section
+    if expansion_suggestions:
+        lines.extend([
+            "",
+            "## 📈 Expansion Queue",
+            "",
+            "Riddler suggests Cheetah expand into these areas tomorrow:",
+            ""
+        ])
+        for i, sugg in enumerate(expansion_suggestions, 1):
+            lines.extend([
+                f"{i}. **{sugg['name']}**",
+                f"   - Query: `{sugg['query']}`",
+                f"   - Why: {sugg['reason']}",
+                ""
+            ])
+    
     lines.extend([
         "---",
         "",
-        f"*Next update scheduled after next Cheetah run*"
+        f"*Next update scheduled after next Cheetah run*",
+        "",
+        f"<!-- EXPANSION: {expansion_json} -->"
     ])
     
     return '\n'.join(lines)

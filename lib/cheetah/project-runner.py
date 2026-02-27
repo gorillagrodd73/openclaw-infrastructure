@@ -5,6 +5,7 @@ Iterates through /Users/chimpman/Projects/ and runs research per-project.
 """
 import json
 import os
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -24,6 +25,56 @@ def load_instructions(project_path):
         with open(instructions_file, 'r') as f:
             return json.load(f)
     return None
+
+def load_expansion_queue(project_path):
+    """Load expansion suggestions from Riddler's latest digest."""
+    digest_file = project_path / ".ai" / "riddler" / "output" / "latest.md"
+    if not digest_file.exists():
+        return []
+    
+    try:
+        with open(digest_file, 'r') as f:
+            content = f.read()
+        
+        # Extract EXPANSION JSON from HTML comment
+        match = re.search(r'<!-- EXPANSION: (.*?)-->', content, re.DOTALL)
+        if match:
+            expansion_json = match.group(1).strip()
+            return json.loads(expansion_json)
+    except Exception as e:
+        print(f"   (no expansion queue found: {e})")
+    
+    return []
+
+def get_expansion_state(project_path):
+    """Get state of searched expansions."""
+    state_file = project_path / ".ai" / "cheetah" / ".state.json"
+    if state_file.exists():
+        with open(state_file, 'r') as f:
+            state = json.load(f)
+            return state.get("expansions", {})
+    return {}
+
+def save_expansion_searched(project_path, expansion_id, depth):
+    """Mark an expansion as searched."""
+    state_file = project_path / ".ai" / "cheetah" / ".state.json"
+    state_file.parent.mkdir(parents=True, exist_ok=True)
+    
+    state = {}
+    if state_file.exists():
+        with open(state_file, 'r') as f:
+            state = json.load(f)
+    
+    if "expansions" not in state:
+        state["expansions"] = {}
+    
+    state["expansions"][expansion_id] = {
+        "depth": depth,
+        "last_searched": datetime.now().isoformat()
+    }
+    
+    with open(state_file, 'w') as f:
+        json.dump(state, f, indent=2)
 
 def should_run_topic(topic, last_run_str):
     """Check if a topic should run based on frequency."""
@@ -119,6 +170,46 @@ def run_for_project(project_path):
     output_dir.mkdir(parents=True, exist_ok=True)
     
     results = []
+    
+    # --- EXPANSION QUEUE (Riddler-guided) ---
+    expansion_queue = load_expansion_queue(project_path)
+    expansion_state = get_expansion_state(project_path)
+    max_depth = 2  # Configurable
+    
+    if expansion_queue:
+        print(f"  🔍 Found {len(expansion_queue)} expansion suggestion(s) from Riddler")
+        
+        for exp in expansion_queue:
+            exp_id = exp.get('id')
+            exp_depth = exp.get('depth', 1)
+            
+            # Skip if already searched at this depth
+            if exp_id in expansion_state:
+                prev_depth = expansion_state[exp_id].get('depth', 0)
+                if prev_depth >= exp_depth:
+                    print(f"    ⏸ Skipping '{exp_id}' (already searched at depth {prev_depth})")
+                    continue
+            
+            # Only search if depth is within limit
+            if exp_depth <= max_depth:
+                print(f"    ↳ Expanding: {exp.get('name')} (depth {exp_depth})")
+                
+                # Create expansion topic
+                expansion_topic = {
+                    'id': f"expansion-{exp_id}",
+                    'query': exp.get('query'),
+                    'frequency': 'daily'  # Expansions can be retried
+                }
+                
+                result = research_topic_for_project(project_path, expansion_topic, output_dir)
+                results.append(result)
+                
+                # Mark as searched
+                save_expansion_searched(project_path, exp_id, exp_depth)
+            else:
+                print(f"    ⏸ Skipping '{exp_id}' (depth {exp_depth} > max {max_depth})")
+    
+    # --- STANDARD TOPICS ---
     for topic in instructions.get("topics", []):
         last_run = get_last_run(project_path, topic['id'])
         if should_run_topic(topic, last_run):
