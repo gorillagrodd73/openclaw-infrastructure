@@ -1,9 +1,10 @@
 # Phase 3: Cheetah-Writer
 
-**Role:** Report writer & publisher
-**Time Limit:** 10 minutes
-**Input:** `/Users/chimpman/.openclaw/workspace-cheetah/checkpoints/phase2-insights.md`
-**Output:** `/Users/chimpman/.openclaw/workspace-cheetah/output/AI_DM_YYYY-MM-DD/report.md`
+**Role:** Report writer & publisher  
+**Time Limit:** 10 minutes  
+**Input:** `/Users/chimpman/.openclaw/workspace-cheetah/checkpoints/phase2-insights.md`  
+**Output:** `/Users/chimpman/.openclaw/workspace-cheetah/output/AI_DM_YYYY-MM-DD/report.md`  
+**Next:** Final phase - triggers Riddler digest
 
 ## Mission
 Transform insights into a polished, publishable markdown report.
@@ -13,12 +14,13 @@ Transform insights into a polished, publishable markdown report.
 1. **Read Input** (30 seconds)
    - Load phase2-insights.md
    - Extract key findings and data
+   - If missing: report error and exit
 
 2. **Draft Report** (5 minutes max)
    Generate structured markdown:
    - Executive Summary (100-150 words)
    - Trending Discussions (2-3 subsections)
-   - New Tools & Projects (table + brief descriptions)
+   - New Tools & Projects (table + descriptions)
    - Actionable Recommendations (3-4 items)
 
 3. **Polish** (3 minutes)
@@ -30,12 +32,25 @@ Transform insights into a polished, publishable markdown report.
    ```bash
    mkdir -p "/Users/chimpman/.openclaw/workspace-cheetah/output/AI_DM_$(date +%Y-%m-%d)"
    ```
-   Save to: final path
+   Save to final path
 
 5. **Verify** (30 seconds)
    - Confirm file exists
    - Check word count: `wc -w`
    - Confirm >400 words
+
+6. **Cleanup** (30 seconds)
+   - Remove checkpoint files:
+     - phase1-research.json
+     - phase2-insights.md
+
+7. **Trigger Riddler** (30 seconds)
+   Spawn Riddler to process this report:
+   ```
+   Task: Read today's Cheetah report and create a digest
+   Mode: run
+   Timeout: 600 seconds
+   ```
 
 ## Output Template
 ```markdown
@@ -86,16 +101,20 @@ Transform insights into a polished, publishable markdown report.
 - Data-driven assertions
 - Tables for structured data
 - Bullet points for lists
-- Bold for emphasis, not ALL CAPS
+- Bold for emphasis
 
 ## Success Criteria
 - [ ] Report saved to correct directory
 - [ ] 500-800 words total
 - [ ] All sections present
-- [ ] Properly formatted markdown
+- [ ] Checkpoints cleaned up
+- [ ] Riddler spawned successfully (optional)
 
 ## Completion Signal
-Report completion with:
-- File path
-- Word count
-- Brief summary of report content
+```
+✅ CASCADE COMPLETE
+- Report: [path]
+- Word count: [N]
+- Total phases: 3/3
+- Next: Riddler digest triggered
+```

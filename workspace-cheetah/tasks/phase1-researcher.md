@@ -1,9 +1,10 @@
 # Phase 1: Cheetah-Researcher
 
-**Role:** Research data gatherer
-**Time Limit:** 10 minutes
-**Input:** Today's topic (Thu=AI-DM)
-**Output:** `/Users/chimpman/.openclaw/workspace-cheetah/checkpoints/phase1-research.json`
+**Role:** Research data gatherer  
+**Time Limit:** 10 minutes  
+**Input:** Today's topic (Thu=AI-DM)  
+**Output:** `/Users/chimpman/.openclaw/workspace-cheetah/checkpoints/phase1-research.json`  
+**Next:** Spawns Phase 2 (Analyzer) on completion
 
 ## Mission
 Gather raw research data on AI Dungeon Master tools from GitHub.
@@ -29,22 +30,23 @@ Gather raw research data on AI Dungeon Master tools from GitHub.
 4. **Save Checkpoint** (30 seconds)
    Save JSON to: `/Users/chimpman/.openclaw/workspace-cheetah/checkpoints/phase1-research.json`
 
+5. **Spawn Phase 2** (30 seconds)
+   Use sessions_spawn to trigger Phase 2:
+   ```
+   Task: Read /Users/chimpman/.openclaw/workspace-cheetah/tasks/phase2-analyzer.md and execute as Cheetah (Phase 2: Analyzer)
+   Mode: run
+   Timeout: 600 seconds
+   ```
+
 ## Success Criteria
 - [ ] At least 3 repos with full details
-- [ ] JSON file created with structure:
-  ```json
-  {
-    "timestamp": "ISO8601",
-    "topic": "AI-DM",
-    "repos": [...],
-    "sources": ["github"]
-  }
-  ```
+- [ ] JSON file created
+- [ ] Phase 2 spawned successfully
 
 ## Fast Failure Rules
 - If GitHub API rate-limited: skip, save what you have
 - If curl timeout after 2 attempts: skip that repo
-- If total time exceeds 8 min: save partial results
+- If total time exceeds 8 min: save partial results and spawn Phase 2 anyway
 
 ## Output Example
 ```json

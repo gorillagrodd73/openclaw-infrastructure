@@ -1,0 +1,105 @@
+{
+  "timestamp": "2026-02-26T16:34:00-08:00",
+  "topic": "AI-DM",
+  "repo_count": 10,
+  "repos": [
+    {
+      "name": "dnd-rag-helper",
+      "full_name": "Kionchi/dnd-rag-helper",
+      "description": "Local RAG-Based AI Assistant for D&D 5e An advanced, privacy-focused tabletop companion built using LangChain, Ollama, and ChromaDB. This system enables Dungeon Masters and players to query the vast D&D 5e rulebook ecosystem with zero cloud dependency.",
+      "html_url": "https://github.com/Kionchi/dnd-rag-helper",
+      "stars": 1,
+      "language": "Python",
+      "updated": "2026-02-15T20:20:28Z",
+      "readme_summary": "Privacy-focused RAG assistant using LangChain, Ollama, ChromaDB for offline D&D 5e rule queries"
+    },
+    {
+      "name": "DnDbug",
+      "full_name": "sudeengin/DnDbug",
+      "description": "DnDbug is an AI-driven storytelling assistant designed to help Game Masters (GMs) plan, structure, and run Dungeons & Dragons sessions more efficiently. It supports the creative process from initial concept to scene-by-scene storytelling — while keeping the GM fully in control.",
+      "html_url": "https://github.com/sudeengin/DnDbug",
+      "stars": 1,
+      "language": "Python",
+      "updated": "2026-01-04T22:30:25Z",
+      "readme_summary": "AI-driven storytelling assistant for session planning, structure, and scene-by-scene storytelling"
+    },
+    {
+      "name": "dm-hud",
+      "full_name": "mcstew/dm-hud",
+      "description": "Real-time AI-powered assistant for D&D 5.5e Dungeon Masters - Automatic entity tracking, character milestones, and session reports",
+      "html_url": "https://github.com/mcstew/dm-hud",
+      "stars": 0,
+      "language": "JavaScript",
+      "updated": "2026-02-25T15:50:31Z",
+      "readme_summary": "DM HUD v0.8.0 - Real-time assistant with automatic entity tracking, milestones, session reports for D&D 5.5e"
+    },
+    {
+      "name": "DND_DM",
+      "full_name": "Zemk0/DND_DM",
+      "description": "Python-based Dungeons & Dragons 5e assistant with AI-powered Dungeon Master, cinematic text-to-speech narration, and manual speech-to-text player input for immersive tabletop RPG experiences.",
+      "html_url": "https://github.com/Zemk0/DND_DM",
+      "stars": 0,
+      "language": "Python",
+      "updated": "2026-02-17T15:36:57Z",
+      "readme_summary": "Python D&D 5e assistant with AI DM, TTS narration, STT player input for immersive gameplay"
+    },
+    {
+      "name": "natural20-rag",
+      "full_name": "bazingiu/natural20-rag",
+      "description": "An advanced RAG-based AI assistant for Dungeons & Dragons (5e). Built with LlamaIndex, Ollama, and Qdrant to provide precise rule interpretations",
+      "html_url": "https://github.com/bazingiu/natural20-rag",
+      "stars": 0,
+      "language": "Python",
+      "updated": "2026-01-31T09:33:17Z",
+      "readme_summary": "RAG assistant using LlamaIndex, Ollama, Qdrant for precise D&D 5e rule interpretations"
+    },
+    {
+      "name": "ai-dm-assistant",
+      "full_name": "salvnetto/ai-dm-assistant",
+      "description": "AI Dungeon Master assistant for Session Prep",
+      "html_url": "https://github.com/salvnetto/ai-dm-assistant",
+      "stars": 0,
+      "language": null,
+      "updated": "2026-02-24T13:30:45Z"
+    },
+    {
+      "name": "gary",
+      "full_name": "mentekid/gary",
+      "description": "Gary the Dungeon Master AI Assistant",
+      "html_url": "https://github.com/mentekid/gary",
+      "stars": 0,
+      "language": "TypeScript",
+      "updated": "2026-02-22T18:39:24Z"
+    },
+    {
+      "name": "DnD-RAG-Chatbot",
+      "full_name": "waqar1978/DnD-RAG-Chatbot",
+      "description": "An AI-powered assistant that learns Dungeons & Dragons (D&D 5e) rules from PDFs, answers rules questions using a RAG (Retrieval-Augmented Generation) pipeline, and falls back to web search + a cloud LLM when local context is not enough.",
+      "html_url": "https://github.com/waqar1978/DnD-RAG-Chatbot",
+      "stars": 0,
+      "language": "Python",
+      "updated": "2026-02-10T05:32:51Z"
+    },
+    {
+      "name": "NLP_RPG_Narrative_Assistant",
+      "full_name": "paulocfj/NLP_RPG_Narrative_Assistant",
+      "description": "An AI-powered virtual assistant for Dungeon Masters. Uses Natural Language Processing (NLP) to generate coherent, ready-to-play narratives for short RPG one-shot sessions. UFG Postgraduate Thesis Project.",
+      "html_url": "https://github.com/paulocfj/NLP_RPG_Narrative_Assistant",
+      "stars": 0,
+      "language": "TypeScript",
+      "updated": "2026-01-24T15:52:59Z"
+    },
+    {
+      "name": "Generative-AI-Dungeon-Master-Assistant-for-Role-Playing-Games",
+      "full_name": "radhi2005/Generative-AI-Dungeon-Master-Assistant-for-Role-Playing-Games",
+      "description": null,
+      "html_url": "https://github.com/radhi2005/Generative-AI-Dungeon-Master-Assistant-for-Role-Playing-Games",
+      "stars": 0,
+      "language": "HTML",
+      "updated": "2025-12-26T14:58:57Z"
+    }
+  ],
+  "sources": ["github"],
+  "phase": 1,
+  "status": "complete"
+}

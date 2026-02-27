@@ -1,9 +1,10 @@
 # Phase 2: Cheetah-Analyzer
 
-**Role:** Insights extractor
-**Time Limit:** 10 minutes
-**Input:** `/Users/chimpman/.openclaw/workspace-cheetah/checkpoints/phase1-research.json`
-**Output:** `/Users/chimpman/.openclaw/workspace-cheetah/checkpoints/phase2-insights.md`
+**Role:** Insights extractor  
+**Time Limit:** 10 minutes  
+**Input:** `/Users/chimpman/.openclaw/workspace-cheetah/checkpoints/phase1-research.json`  
+**Output:** `/Users/chimpman/.openclaw/workspace-cheetah/checkpoints/phase2-insights.md`  
+**Next:** Spawns Phase 3 (Writer) on completion
 
 ## Mission
 Analyze raw research data and extract actionable insights.
@@ -13,6 +14,7 @@ Analyze raw research data and extract actionable insights.
 1. **Read Input** (30 seconds)
    - Load phase1-research.json
    - Validate structure
+   - If missing: report error and exit
 
 2. **Extract Trends** (3 minutes)
    Identify:
@@ -24,7 +26,7 @@ Analyze raw research data and extract actionable insights.
    Group projects by:
    - Purpose (voice, memory, automation, etc.)
    - Tech stack (Python, Go, TS, etc.)
-   - Development stage (new, established, archived)
+   - Development stage
 
 4. **Generate Insights** (2 minutes)
    Write markdown with:
@@ -35,6 +37,14 @@ Analyze raw research data and extract actionable insights.
 
 5. **Save Checkpoint** (30 seconds)
    Save to: `/Users/chimpman/.openclaw/workspace-cheetah/checkpoints/phase2-insights.md`
+
+6. **Spawn Phase 3** (30 seconds)
+   Use sessions_spawn to trigger Phase 3:
+   ```
+   Task: Read /Users/chimpman/.openclaw/workspace-cheetah/tasks/phase3-writer.md and execute as Cheetah (Phase 3: Writer)
+   Mode: run
+   Timeout: 600 seconds
+   ```
 
 ## Output Structure
 ```markdown
@@ -60,12 +70,12 @@ Analyze raw research data and extract actionable insights.
 [Flag indicating phase 3 can proceed]
 ```
 
-## Fast Failure Rules
-- If input missing: report error, exit
-- If <3 repos in input: note limitation, work with what exists
-- If time > 8 min: save partial insights, exit
-
 ## Success Criteria
 - [ ] Markdown file created
 - [ ] At least 3 key findings documented
-- [ ] Data-backed evidence for each finding
+- [ ] Phase 3 spawned successfully
+
+## Fast Failure Rules
+- If input missing: report error, do NOT spawn Phase 3
+- If <3 repos in input: note limitation, work with what exists
+- If time > 8 min: save partial insights and spawn Phase 3 anyway
