@@ -22,6 +22,11 @@ Add whatever helps you do your job. This is your cheat sheet.
 - Channel: Status Reports
 - Purpose: Daily status summaries from Grodd
 
+**Cron Alerts:**
+- URL: `https://discord.com/api/webhooks/1474823067606974485/CD_qHemh9Ff9I8y2mixSZDOwuCmV8Uqo2w6eJvvMbmNdzjgIdRurnXqh40mq1Wrofbmo`
+- Channel: cron-alerts
+- Purpose: All cron job status and errors
+
 ---
 
 ### Google Workspace (gog)
