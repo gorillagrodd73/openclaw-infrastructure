@@ -16,9 +16,7 @@
       "firstSeen": "2026-02-27",
       "lastSeen": "2026-02-27",
       "seenCount": 1,
-      "sources": [
-        "github"
-      ]
+      "sources": ["github"]
     },
     "toolszera": {
       "name": "toolszera",
@@ -31,9 +29,7 @@
       "firstSeen": "2026-02-27",
       "lastSeen": "2026-02-27",
       "seenCount": 1,
-      "sources": [
-        "github"
-      ]
+      "sources": ["github"]
     },
     "quilltap": {
       "name": "quilltap",
@@ -46,9 +42,7 @@
       "firstSeen": "2026-02-27",
       "lastSeen": "2026-02-27",
       "seenCount": 1,
-      "sources": [
-        "github"
-      ]
+      "sources": ["github"]
     },
     "aimmy": {
       "name": "aimmy",
@@ -61,14 +55,12 @@
       "firstSeen": "2026-02-27",
       "lastSeen": "2026-02-27",
       "seenCount": 1,
-      "sources": [
-        "github"
-      ]
+      "sources": ["github"]
     },
     "siteguru": {
       "name": "siteguru",
       "displayName": "Cbarr32/siteguru",
-      "description": "Personal unified command center \u2014 email, music, social, dev tools, and AI agent sidekick in one dashboard. Built with Next.js, Railway, Vercel.",
+      "description": "Personal unified command center — email, music, social, dev tools, and AI agent sidekick in one dashboard. Built with Next.js, Railway, Vercel.",
       "stars": 0,
       "language": "TypeScript",
       "url": "https://github.com/Cbarr32/siteguru",
@@ -76,9 +68,7 @@
       "firstSeen": "2026-02-27",
       "lastSeen": "2026-02-27",
       "seenCount": 1,
-      "sources": [
-        "github"
-      ]
+      "sources": ["github"]
     },
     "menonlab-blog": {
       "name": "menonlab-blog",
@@ -91,9 +81,7 @@
       "firstSeen": "2026-02-27",
       "lastSeen": "2026-02-27",
       "seenCount": 1,
-      "sources": [
-        "github"
-      ]
+      "sources": ["github"]
     },
     "cursor-workspace": {
       "name": "cursor-workspace",
@@ -106,14 +94,12 @@
       "firstSeen": "2026-02-27",
       "lastSeen": "2026-02-27",
       "seenCount": 1,
-      "sources": [
-        "github"
-      ]
+      "sources": ["github"]
     },
     "conductor": {
       "name": "conductor",
       "displayName": "thealxlabs/conductor",
-      "description": "AI integration hub \u2014 25 plugins, 146 tools. Connect Claude, GPT-4o, Gemini & Ollama to Gmail, Spotify, GitHub Actions, Vercel, n8n, Notion and more. One installer. MCP + Telegram.",
+      "description": "AI integration hub — 25 plugins, 146 tools. Connect Claude, GPT-4o, Gemini & Ollama to Gmail, Spotify, GitHub Actions, Vercel, n8n, Notion and more. One installer. MCP + Telegram.",
       "stars": 0,
       "language": "TypeScript",
       "url": "https://github.com/thealxlabs/conductor",
@@ -121,14 +107,12 @@
       "firstSeen": "2026-02-27",
       "lastSeen": "2026-02-27",
       "seenCount": 1,
-      "sources": [
-        "github"
-      ]
+      "sources": ["github"]
     },
     "cockpit-tools": {
       "name": "cockpit-tools",
       "displayName": "jlcodes99/cockpit-tools",
-      "description": "\ud83d\ude80 \u901a\u7528 AI IDE \u8d26\u53f7\u7ba1\u7406\u5de5\u5177\uff1a\u652f\u6301 Antigravity / Codex / GitHub Copilot / Windsurf / Kiro\uff0c\u591a\u8d26\u53f7\u5207\u6362\u3001\u914d\u989d\u76d1\u63a7\u3001\u81ea\u52a8\u5524\u9192\u4e0e\u591a\u5f00\u5b9e\u4f8b\u7ba1\u7406\u3002  \ud83d\ude80 Universal AI IDE account manager for Antigravity / Codex / GitHub Copilot / Windsurf / Kiro, with multi-account switching, quota monitoring, wake-up automation, and multi-instance management.",
+      "description": "通用 AI IDE 账号管理工具：支持 Antigravity / Codex / GitHub Copilot / Windsurf / Kiro，多账号切换、配额监控、自动唤醒与多开实例管理。 Universal AI IDE account manager for Antigravity / Codex / GitHub Copilot / Windsurf / Kiro, with multi-account switching, quota monitoring, wake-up automation, and multi-instance management.",
       "stars": 776,
       "language": "Rust",
       "url": "https://github.com/jlcodes99/cockpit-tools",
@@ -136,9 +120,7 @@
       "firstSeen": "2026-02-27",
       "lastSeen": "2026-02-27",
       "seenCount": 1,
-      "sources": [
-        "github"
-      ]
+      "sources": ["github"]
     },
     "ai-training": {
       "name": "ai-training",
@@ -151,16 +133,47 @@
       "firstSeen": "2026-02-27",
       "lastSeen": "2026-02-27",
       "seenCount": 1,
-      "sources": [
-        "github"
-      ]
+      "sources": ["github"]
     }
   },
-  "trends": [],
-  "recommendations": [],
-  "sources": {
-    "github": [],
-    "reddit": [],
-    "web": []
-  }
-}
+  "trends": [
+    {
+      "id": "trend-001",
+      "pattern": "AI IDE Tooling Explosion",
+      "description": "Strong focus on AI-powered development tools, particularly around Cursor rules (cursor-workspace), IDE account management (cockpit-tools, 776 stars), and agent skills (skill-marketplace). Developer experience is the dominant use case.",
+      "confidence": "high",
+      "evidence": ["cockpit-tools", "cursor-workspace", "skill-marketplace", "conductor"]
+    },
+    {
+      "id": "trend-002",
+      "pattern": "TypeScript/Next.js for AI Apps",
+      "description": "4 of 10 projects use TypeScript (40%), with Next.js/Vercel being the dominant stack for AI application frontends. Rust used for performance-critical tooling (cockpit-tools).",
+      "confidence": "high",
+      "evidence": ["toolszera", "quilltap", "siteguru", "conductor"]
+    },
+    {
+      "id": "trend-003",
+      "pattern": "Unified Command Centers",
+      "description": "Multiple projects attempting to unify disparate AI tools into single dashboards (siteguru, conductor, cockpit-tools) — consolidation trend in fragmented AI tooling landscape.",
+      "confidence": "medium",
+      "evidence": ["siteguru", "conductor", "cockpit-tools"]
+    },
+    {
+      "id": "trend-004",
+      "pattern": "Agent Skills as Infrastructure",
+      "description": "Emerging pattern of packaging AI behaviors as reusable 'skills' or 'rules' (skill-marketplace, cursor-workspace) — shift from one-off prompts to structured, reusable agent capabilities.",
+      "confidence": "medium",
+      "evidence": ["skill-marketplace", "cursor-workspace"]
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "rec-001",
+      "priority": "high",
+      "text": "Track cockpit-tools evolution: High-star count (776) and active Rust development suggests this fills a real pain point in AI IDE management. Monitor for feature expansion.",
+      "rationale": "Best-performing project indicates genuine developer need"
+    },
+    {
+      "id": "rec-002",
+      "priority": "medium",
+      "text": "Consolidation opportunity: Multiple projects building unified dashboards — expect mergers or dominant platform to emerge within 6 months." }, { "id": "rec-003", "priority": "low", "text": "Watch TypeScript dominance: 40% usage suggests strong momentum. Evaluate Rust adoption for performance-critical AI tools.", "rationale": "Language trends indicate ecosystem health" } ] }
