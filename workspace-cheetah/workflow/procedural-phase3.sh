@@ -20,7 +20,7 @@ case $DAY_OF_WEEK in
     2) TOPIC="devtools" ;;
     3) TOPIC="vtt" ;;
     4) TOPIC="ai-dm" ;;
-    6|7) TOPIC="mixed" ;;
+    6|7) TOPIC="ai-llm" ;;
     *) TOPIC="mixed" ;;
 esac
 
