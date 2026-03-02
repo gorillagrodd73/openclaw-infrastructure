@@ -75,7 +75,7 @@
       "name": "Brainiac OpenClaw System Health",
       "enabled": true,
       "createdAtMs": 1772042858373,
-      "updatedAtMs": 1772410249991,
+      "updatedAtMs": 1772424562515,
       "schedule": {
         "kind": "cron",
         "expr": "0 */4 * * *",
@@ -94,11 +94,11 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": 1772424123930,
-        "lastRunAtMs": 1772410038145,
+        "nextRunAtMs": 1772438523930,
+        "lastRunAtMs": 1772424271221,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 211846,
+        "lastDurationMs": 291294,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -179,7 +179,7 @@
       "name": "Grundy Heartbeat",
       "enabled": true,
       "createdAtMs": 1772055717252,
-      "updatedAtMs": 1772420717763,
+      "updatedAtMs": 1772424271169,
       "schedule": {
         "kind": "cron",
         "expr": "0 * * * *",
@@ -198,11 +198,11 @@
         "to": "1474821794686042354"
       },
       "state": {
-        "nextRunAtMs": 1772424016692,
-        "lastRunAtMs": 1772420416701,
+        "nextRunAtMs": 1772427616692,
+        "lastRunAtMs": 1772424016700,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 301062,
+        "lastDurationMs": 254469,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -318,7 +318,7 @@
       "name": "Sinestro Daily Strategy",
       "enabled": true,
       "createdAtMs": 1772416162848,
-      "updatedAtMs": 1772416162848,
+      "updatedAtMs": 1772421880581,
       "schedule": {
         "kind": "cron",
         "expr": "0 7 * * *"
@@ -336,14 +336,14 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": null,
-        "lastRunAtMs": null,
-        "lastRunStatus": null,
-        "lastStatus": null,
-        "lastDurationMs": null,
-        "lastDeliveryStatus": null,
+        "nextRunAtMs": 1772463600000,
+        "lastRunAtMs": 1772421327163,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 553418,
+        "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "lastDelivered": null
+        "lastDelivered": true
       }
     }
   ]
