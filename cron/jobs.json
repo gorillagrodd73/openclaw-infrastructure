@@ -7,7 +7,7 @@
       "name": "Riddler Digest",
       "enabled": true,
       "createdAtMs": 1772042350337,
-      "updatedAtMs": 1772396743933,
+      "updatedAtMs": 1772434986124,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *"
@@ -25,11 +25,11 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": 1772434800000,
-        "lastRunAtMs": 1772396526244,
+        "nextRunAtMs": 1772521200000,
+        "lastRunAtMs": 1772434800013,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 217689,
+        "lastDurationMs": 186111,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -66,7 +66,8 @@
         "lastDurationMs": 77879,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "lastDelivered": true
+        "lastDelivered": true,
+        "runningAtMs": 1772436600012
       }
     },
     {
@@ -179,7 +180,7 @@
       "name": "Grundy Heartbeat",
       "enabled": true,
       "createdAtMs": 1772055717252,
-      "updatedAtMs": 1772431896442,
+      "updatedAtMs": 1772435319052,
       "schedule": {
         "kind": "cron",
         "expr": "0 * * * *",
@@ -198,11 +199,11 @@
         "to": "1474821794686042354"
       },
       "state": {
-        "nextRunAtMs": 1772434816692,
-        "lastRunAtMs": 1772431662752,
+        "nextRunAtMs": 1772438416692,
+        "lastRunAtMs": 1772434986151,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 233690,
+        "lastDurationMs": 332901,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
