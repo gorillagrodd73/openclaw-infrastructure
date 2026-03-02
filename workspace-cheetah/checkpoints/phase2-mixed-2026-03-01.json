@@ -1,0 +1,49 @@
+{
+  "phase": "2",
+  "topic": "mixed",
+  "date": "2026-03-01",
+  "time": "evening",
+  "status": "insufficient_data",
+  "summary": {
+    "totalProjects": 0,
+    "newProjectsToday": 0,
+    "trendsIdentified": 0,
+    "recommendations": 0
+  },
+  "trends": [],
+  "insights": [
+    "Sunday mixed topic knowledge base is empty (0 findings)",
+    "Phase 1 data collection appears not to have run for evening cycle",
+    "Knowledge base created: 2026-02-28T22:30:00",
+    "No previous analysis history available",
+    "Awaiting Phase 1 data collection"
+  ],
+  "recommendations": [
+    {
+      "id": "rec-mixed-001",
+      "priority": "high",
+      "text": "Execute Phase 1 procedural workflow for mixed topic to populate knowledge base",
+      "rationale": "Knowledge base exists but contains zero findings"
+    },
+    {
+      "id": "rec-mixed-002",
+      "priority": "medium",
+      "text": "Verify Phase 1 cron scheduling for Sunday/mixed topic research",
+      "rationale": "Weekend topics may not be triggering Phase 1 correctly"
+    }
+  ],
+  "nextActions": [
+    "Run Phase 1: bash workflow/procedural-phase1.sh",
+    "Re-run Phase 2 after Phase 1 completes"
+  ],
+  "knowledgeBaseUpdated": false,
+  "knowledgeBaseFile": "knowledge/mixed.json",
+  "knowledgeBaseStats": {
+    "totalFindings": 0,
+    "firstCreated": "2026-02-28",
+    "lastUpdated": "2026-02-28T22:30:00.000000",
+    "projectsCount": 0
+  },
+  "note": "Phase 2 evening cycle: Knowledge base exists but has no findings. Phase 1 may not have run. Minimal checkpoint created per fast failure rules.",
+  "timestamp": "2026-03-01T22:15:00.000000"
+}
