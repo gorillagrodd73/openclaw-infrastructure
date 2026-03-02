@@ -179,7 +179,7 @@
       "name": "Grundy Heartbeat",
       "enabled": true,
       "createdAtMs": 1772055717252,
-      "updatedAtMs": 1772417289124,
+      "updatedAtMs": 1772420717763,
       "schedule": {
         "kind": "cron",
         "expr": "0 * * * *",
@@ -198,11 +198,11 @@
         "to": "1474821794686042354"
       },
       "state": {
-        "nextRunAtMs": 1772420416692,
-        "lastRunAtMs": 1772416816701,
+        "nextRunAtMs": 1772424016692,
+        "lastRunAtMs": 1772420416701,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 472423,
+        "lastDurationMs": 301062,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
