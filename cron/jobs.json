@@ -205,7 +205,8 @@
         "lastDurationMs": 433133,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "lastDelivered": true
+        "lastDelivered": true,
+        "runningAtMs": 1772445840469
       }
     },
     {
@@ -214,7 +215,7 @@
       "name": "Brainiac Agent Health Check",
       "enabled": true,
       "createdAtMs": 1772056418494,
-      "updatedAtMs": 1772359447688,
+      "updatedAtMs": 1772445840439,
       "schedule": {
         "kind": "cron",
         "expr": "0 2 * * *"
@@ -232,11 +233,11 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": 1772445600000,
-        "lastRunAtMs": 1772359200012,
+        "nextRunAtMs": 1772532000000,
+        "lastRunAtMs": 1772445600013,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 247676,
+        "lastDurationMs": 240426,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
