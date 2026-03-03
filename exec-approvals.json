@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "socket": {
+    "path": "/Users/chimpman/.openclaw/exec-approvals.sock",
+    "token": "7LCgKYEQI_Og7NShf86fY5hUhSILtXv8"
+  },
+  "defaults": {},
+  "agents": {}
+}
