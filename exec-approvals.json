@@ -5,5 +5,15 @@
     "token": "7LCgKYEQI_Og7NShf86fY5hUhSILtXv8"
   },
   "defaults": {},
-  "agents": {}
+  "agents": {
+    "*": {
+      "allowlist": [
+        {
+          "pattern": "/Users/chimpman/Projects/**",
+          "lastUsedAt": 1772849609011,
+          "id": "9010c96d-89b5-42a1-8c50-8d6c2b7151a5"
+        }
+      ]
+    }
+  }
 }

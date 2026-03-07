@@ -1,0 +1,17 @@
+{
+  "topic": "AI-LLM",
+  "lastAnalysis": "2026-03-06",
+  "trends": [
+    {"id":"trend-001","status":"stable"},
+    {"id":"trend-002","status":"stable"},
+    {"id":"trend-003","status":"emerging"},
+    {"id":"trend-004","status":"experimental"}
+  ],
+  "recommendations": [
+    {"id":"rec-007","status":"urgent"},
+    {"id":"rec-001","status":"active"},
+    {"id":"rec-003","status":"monitoring"}
+  ],
+  "dataStale": true,
+  "analysisNote": "No new data since 2026-02-27. Trend confidence degraded. Immediate Phase 1 resumption required."
+}
