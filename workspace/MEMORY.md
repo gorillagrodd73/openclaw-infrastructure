@@ -33,3 +33,35 @@
 ---
 
 *This file is updated periodically from daily memory files. Last updated: 2026-02-26*
+
+## ⚠️ CRITICAL: Tool Syntax Validation
+
+### Available Tools (CORRECT NAMES):
+- `read` - Read files  
+- `write` - Write files
+- `edit` - Edit files (precise replacements)
+- `exec` - Execute shell commands
+
+### INCORRECT (DO NOT USE):
+- ❌ `callauto1` - This is NOT a tool name
+- ❌ `callX` where X is any number - NOT tools
+- ❌ `functions.read` - Do not prefix with "functions."
+- ❌ `autoX` - Not valid
+### CORRECT SYNTAX:
+ 
+read({ "file_path": "/path/to/file" })
+write({ "file_path": "/path/to/file", "content": "..." })
+edit({ "file_path": "/path/to/file", "old_string": "...", "new_string": "..." })
+exec({ "command": "shell command here" })
+### RULE: If Tool Call Fails
+**If I ever use incorrect tool syntax:**
+1. STOP immediately
+2. Note the CORRECT tool name from context
+3. Update this MEMORY.md section with the error
+4. Review this section before ANY future tool calls
+5. Never repeat the same incorrect tool name twice
+
+### Last Tool Error:
+- Date: 2026-03-07
+- Error: Used `callauto1` instead of `read`/`exec`
+- Fix: Use bare tool names without prefixes

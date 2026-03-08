@@ -1,0 +1,20 @@
+{
+  "topic": "AI-LLM",
+  "lastAnalysis": "2026-03-07",
+  "lastDataPoint": "2026-02-27",
+  "dataAgeDays": 9,
+  "status": "BLOCKED - Stale Data",
+  "trends": [
+    {"id":"trend-001","pattern":"AI IDE Tooling Explosion","status":"degraded","confidence":"low"},
+    {"id":"trend-002","pattern":"TypeScript/Next.js for AI Apps","status":"degraded","confidence":"low"},
+    {"id":"trend-003","pattern":"Unified Command Centers","status":"stale","confidence":"low"},
+    {"id":"trend-004","pattern":"Agent Skills as Infrastructure","status":"stale","confidence":"low"}
+  ],
+  "recommendations": [
+    {"id":"rec-CRITICAL-001","priority":"CRITICAL","text":"Phase 1 MUST resume - 9 days without new data renders trend analysis meaningless"},
+    {"id":"rec-CRITICAL-002","priority":"CRITICAL","text":"All existing trends have LOW confidence until fresh data validates them"},
+    {"id":"rec-001","priority":"suspended","text":"All monitoring suspended until Phase 1 data collection resumes","rationale":"Cannot assess cockpit-tools or other projects without current data"}
+  ],
+  "nextAction": "Trigger Phase 1 tonight",
+  "analysisNote": "No new data since 2026-02-27. Previous Phase 2 analysis degraded from high/medium confidence to low confidence. 10 existing projects in knowledge base need validation."
+}
