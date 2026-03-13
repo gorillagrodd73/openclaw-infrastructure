@@ -4,6 +4,10 @@
   "totalFindings": 10,
   "firstCreated": "2026-02-26",
   "lastUpdated": "2026-02-26",
+  "phase2Checkpoint": "checkpoints/phase2-ai-dm-2026-03-12.json",
+  "analysisHistory": [
+    "2026-02-26: Initial trends identified",
+    "2026-03-12: Trends degraded - no new data for 14 days, Phase 1 not collecting",
   "projects": [
     {
       "name": "dnd-rag-helper",
