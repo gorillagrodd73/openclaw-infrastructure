@@ -7,7 +7,7 @@
       "name": "Riddler Digest",
       "enabled": true,
       "createdAtMs": 1772042350337,
-      "updatedAtMs": 1773381863695,
+      "updatedAtMs": 1773468118786,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *"
@@ -25,14 +25,15 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": 1773468000000,
-        "lastRunAtMs": 1773381600015,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 263680,
+        "nextRunAtMs": 1773554400000,
+        "lastRunAtMs": 1773468000014,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 118772,
         "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": true
+        "consecutiveErrors": 1,
+        "lastDelivered": true,
+        "lastError": "⚠️ 🧩 Tool failed"
       }
     },
     {
@@ -41,7 +42,7 @@
       "name": "Daily Git Update",
       "enabled": true,
       "createdAtMs": 1772042351014,
-      "updatedAtMs": 1773297076532,
+      "updatedAtMs": 1773383466166,
       "schedule": {
         "kind": "cron",
         "expr": "30 23 * * *"
@@ -59,15 +60,15 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": 1773383400000,
-        "lastRunAtMs": 1773297000010,
+        "nextRunAtMs": 1773469800000,
+        "lastRunAtMs": 1773383400012,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 76522,
+        "lastDurationMs": 66154,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true,
-        "runningAtMs": 1773383400009
+        "runningAtMs": 1773469800007
       }
     },
     {
@@ -76,7 +77,7 @@
       "name": "Brainiac OpenClaw System Health",
       "enabled": true,
       "createdAtMs": 1772042858373,
-      "updatedAtMs": 1773371006338,
+      "updatedAtMs": 1773457635062,
       "schedule": {
         "kind": "cron",
         "expr": "0 */4 * * *",
@@ -95,11 +96,11 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": 1773385323930,
-        "lastRunAtMs": 1773370945034,
+        "nextRunAtMs": 1773471723930,
+        "lastRunAtMs": 1773457528824,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 61304,
+        "lastDurationMs": 106238,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -111,7 +112,7 @@
       "name": "Grodd Daily Standup",
       "enabled": true,
       "createdAtMs": 1772051023962,
-      "updatedAtMs": 1773331921145,
+      "updatedAtMs": 1773418052236,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * *"
@@ -129,13 +130,13 @@
         "to": "1475159106800062594"
       },
       "state": {
-        "nextRunAtMs": 1773417600000,
-        "lastRunAtMs": 1773331200009,
+        "nextRunAtMs": 1773504000000,
+        "lastRunAtMs": 1773417600014,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 721136,
+        "lastDurationMs": 452222,
         "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 4,
+        "consecutiveErrors": 5,
         "lastError": "Error: Unknown Channel"
       }
     },
@@ -145,7 +146,7 @@
       "name": "Cheetah Research",
       "enabled": true,
       "createdAtMs": 1772052292352,
-      "updatedAtMs": 1773378214411,
+      "updatedAtMs": 1773464472049,
       "schedule": {
         "kind": "cron",
         "expr": "0 22 * * *"
@@ -164,11 +165,11 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": 1773464400000,
-        "lastRunAtMs": 1773378000015,
+        "nextRunAtMs": 1773550800000,
+        "lastRunAtMs": 1773464400018,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 214396,
+        "lastDurationMs": 72031,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -180,7 +181,7 @@
       "name": "Grundy Heartbeat",
       "enabled": true,
       "createdAtMs": 1772055717252,
-      "updatedAtMs": 1773382031185,
+      "updatedAtMs": 1773468727651,
       "schedule": {
         "kind": "cron",
         "expr": "0 * * * *",
@@ -199,15 +200,15 @@
         "to": "1474821794686042354"
       },
       "state": {
-        "nextRunAtMs": 1773385216692,
-        "lastRunAtMs": 1773381865762,
+        "nextRunAtMs": 1773471616692,
+        "lastRunAtMs": 1773468120841,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 165423,
+        "lastDurationMs": 606810,
         "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 3,
+        "consecutiveErrors": 1,
         "lastDelivered": true,
-        "lastError": "⚠️ 🧩 Tool: `ls -lt ~/.openclaw/cron/runs/ | head -10` failed"
+        "lastError": "⚠️ 🧩 Tool: `ls -lt ~/.openclaw/workspace-toyman/memory/*.md 2>/dev/null | head -5` failed"
       }
     },
     {
@@ -216,7 +217,7 @@
       "name": "Brainiac Agent Health Check",
       "enabled": true,
       "createdAtMs": 1772056418494,
-      "updatedAtMs": 1773306367448,
+      "updatedAtMs": 1773392765145,
       "schedule": {
         "kind": "cron",
         "expr": "0 2 * * *"
@@ -234,11 +235,11 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": 1773392400000,
-        "lastRunAtMs": 1773306000013,
+        "nextRunAtMs": 1773478800000,
+        "lastRunAtMs": 1773392400012,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 367435,
+        "lastDurationMs": 365133,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
@@ -250,7 +251,7 @@
       "name": "Cheetah Research - Phase 2 Analyzer",
       "enabled": true,
       "createdAtMs": 1772153233001,
-      "updatedAtMs": 1773379607208,
+      "updatedAtMs": 1773465869350,
       "schedule": {
         "kind": "cron",
         "expr": "15 22 * * *"
@@ -269,14 +270,15 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": 1773465300000,
-        "lastRunAtMs": 1773378900012,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 707196,
+        "nextRunAtMs": 1773551700000,
+        "lastRunAtMs": 1773465300010,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 569340,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "consecutiveErrors": 1,
+        "lastError": "⚠️ 🧩 Tool failed"
       }
     },
     {
@@ -285,7 +287,7 @@
       "name": "Cheetah Research - Phase 3 Writer",
       "enabled": true,
       "createdAtMs": 1772153233002,
-      "updatedAtMs": 1773379841801,
+      "updatedAtMs": 1773466321536,
       "schedule": {
         "kind": "cron",
         "expr": "30 22 * * *"
@@ -304,15 +306,15 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": 1773466200000,
-        "lastRunAtMs": 1773379800009,
+        "nextRunAtMs": 1773552600000,
+        "lastRunAtMs": 1773466200009,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 41792,
+        "lastDurationMs": 121527,
         "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 1,
+        "consecutiveErrors": 2,
         "lastDelivered": true,
-        "lastError": "⚠️ 🧩 Tool: `~/.openclaw/workspace-cheetah/workflow/procedural-phase3.sh` failed"
+        "lastError": "⚠️ 🧩 Tool: `cd ~/.openclaw/workspace-cheetah && git status --short` failed"
       }
     },
     {
@@ -321,7 +323,7 @@
       "name": "Sinestro Daily Strategy",
       "enabled": true,
       "createdAtMs": 1772416162848,
-      "updatedAtMs": 1773324616632,
+      "updatedAtMs": 1773411025345,
       "schedule": {
         "kind": "cron",
         "expr": "0 7 * * *"
@@ -339,11 +341,11 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": 1773410400000,
-        "lastRunAtMs": 1773324000012,
+        "nextRunAtMs": 1773496800000,
+        "lastRunAtMs": 1773410400012,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 616620,
+        "lastDurationMs": 625333,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
