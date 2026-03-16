@@ -4,10 +4,11 @@
   "totalFindings": 10,
   "firstCreated": "2026-02-26",
   "lastUpdated": "2026-02-26",
-  "phase2Checkpoint": "checkpoints/phase2-ai-dm-2026-03-12.json",
+  "phase2Checkpoint": "checkpoints/phase2-ai-dm-2026-03-15.json",
   "analysisHistory": [
     "2026-02-26: Initial trends identified",
     "2026-03-12: Trends degraded - no new data for 14 days, Phase 1 not collecting",
+    "2026-03-15: CRITICAL - Phase 1 misconfigured (project-runner.py vs procedural-phase1.sh), 17 days stale",
   "projects": [
     {
       "name": "dnd-rag-helper",
@@ -50,32 +51,50 @@
       "id": "trend-001",
       "pattern": "Local-First Architecture",
       "description": "90% of AI-DM tools prioritize local LLMs (Ollama) and on-device processing for privacy and zero cloud dependency",
-      "confidence": "high",
+      "confidence": "low",
+      "status": "degraded",
+      "lastValidated": "2026-02-26",
+      "dataAgeDays": 17,
       "evidence": ["dnd-rag-helper", "natural20-rag", "DND_DM"]
     },
     {
       "id": "trend-002",
       "pattern": "RAG Pattern Dominance",
       "description": "Knowledge retrieval from D&D 5e rulebooks via RAG is the dominant technical pattern (3/5 top projects)",
-      "confidence": "high",
+      "confidence": "low",
+      "status": "degraded",
+      "lastValidated": "2026-02-26",
+      "dataAgeDays": 17,
       "evidence": ["dnd-rag-helper (LangChain/ChromaDB)", "natural20-rag (LlamaIndex/Qdrant)", "DnD-RAG-Chatbot"]
     },
     {
       "id": "trend-003",
       "pattern": "Speech Integration Emerging",
       "description": "Advanced projects adding voice: TTS narration and STT input for immersive gameplay",
-      "confidence": "medium",
+      "confidence": "low",
+      "status": "degraded",
+      "lastValidated": "2026-02-26",
+      "dataAgeDays": 17,
       "evidence": ["dm-hud (Deepgram transcription)", "DND_DM (edge-tts, Whisper)"]
     },
     {
       "id": "trend-004",
       "pattern": "Python Dominance with JS Rising",
       "description": "Backend predominantly Python (LLM integrations), frontend moving to React/Vite/TS",
-      "confidence": "high",
+      "confidence": "low",
+      "status": "degraded",
+      "lastValidated": "2026-02-26",
+      "dataAgeDays": 17,
       "evidence": ["4 Python repos", "DnDbug React+Vite", "dm-hud JavaScript"]
     }
   ],
   "recommendations": [
+    {
+      "id": "rec-CRITICAL-001",
+      "priority": "CRITICAL",
+      "text": "Fix Phase 1 cron job: Change payload from project-runner.py to procedural-phase1.sh",
+      "rationale": "17 days without data collection - project-runner.py not finding projects or not producing output"
+    },
     {
       "id": "rec-001",
       "priority": "high",

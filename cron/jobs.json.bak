@@ -7,7 +7,7 @@
       "name": "Riddler Digest",
       "enabled": true,
       "createdAtMs": 1772042350337,
-      "updatedAtMs": 1773556005948,
+      "updatedAtMs": 1773641406823,
       "schedule": {
         "kind": "cron",
         "expr": "0 23 * * *"
@@ -25,15 +25,14 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": 1773640800000,
-        "lastRunAtMs": 1773555826803,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 179145,
+        "nextRunAtMs": 1773727200000,
+        "lastRunAtMs": 1773640800011,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 606812,
         "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 2,
-        "lastDelivered": true,
-        "lastError": "⚠️ 🧩 Tool: `~/Projects/DMProject/.ai/cheetah/output/knowledge.json` failed"
+        "consecutiveErrors": 0,
+        "lastDelivered": true
       }
     },
     {
@@ -42,7 +41,7 @@
       "name": "Daily Git Update",
       "enabled": true,
       "createdAtMs": 1772042351014,
-      "updatedAtMs": 1773469826064,
+      "updatedAtMs": 1773588402072,
       "schedule": {
         "kind": "cron",
         "expr": "30 23 * * *"
@@ -61,10 +60,10 @@
       },
       "state": {
         "nextRunAtMs": 1773642600000,
-        "lastRunAtMs": 1773469800013,
+        "lastRunAtMs": 1773588279706,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 26051,
+        "lastDurationMs": 122366,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -76,7 +75,7 @@
       "name": "Brainiac OpenClaw System Health",
       "enabled": true,
       "createdAtMs": 1772042858373,
-      "updatedAtMs": 1773573303208,
+      "updatedAtMs": 1773630851441,
       "schedule": {
         "kind": "cron",
         "expr": "0 */4 * * *",
@@ -95,11 +94,11 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": 1773586923930,
-        "lastRunAtMs": 1773572929504,
+        "nextRunAtMs": 1773644523930,
+        "lastRunAtMs": 1773630651624,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 373704,
+        "lastDurationMs": 199817,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -111,7 +110,7 @@
       "name": "Grodd Daily Standup",
       "enabled": true,
       "createdAtMs": 1772051023962,
-      "updatedAtMs": 1773505834204,
+      "updatedAtMs": 1773590865570,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * *"
@@ -129,13 +128,13 @@
         "to": "1475159106800062594"
       },
       "state": {
-        "nextRunAtMs": 1773590400000,
-        "lastRunAtMs": 1773504000316,
+        "nextRunAtMs": 1773676800000,
+        "lastRunAtMs": 1773590400009,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 1833888,
+        "lastDurationMs": 465561,
         "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 6,
+        "consecutiveErrors": 7,
         "lastError": "Error: Unknown Channel"
       }
     },
@@ -145,7 +144,7 @@
       "name": "Cheetah Research",
       "enabled": true,
       "createdAtMs": 1772052292352,
-      "updatedAtMs": 1773552154798,
+      "updatedAtMs": 1773637266404,
       "schedule": {
         "kind": "cron",
         "expr": "0 22 * * *"
@@ -164,11 +163,11 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": 1773637200000,
-        "lastRunAtMs": 1773550800058,
+        "nextRunAtMs": 1773723600000,
+        "lastRunAtMs": 1773637200014,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 1354740,
+        "lastDurationMs": 66390,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -180,7 +179,7 @@
       "name": "Grundy Heartbeat",
       "enabled": true,
       "createdAtMs": 1772055717252,
-      "updatedAtMs": 1773588159627,
+      "updatedAtMs": 1773642032706,
       "schedule": {
         "kind": "cron",
         "expr": "0 * * * *",
@@ -199,11 +198,11 @@
         "to": "1474821794686042354"
       },
       "state": {
-        "nextRunAtMs": 1773590416692,
-        "lastRunAtMs": 1773586816702,
+        "nextRunAtMs": 1773644416692,
+        "lastRunAtMs": 1773641408880,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 1342925,
+        "lastDurationMs": 623826,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -249,7 +248,7 @@
       "name": "Cheetah Research - Phase 2 Analyzer",
       "enabled": true,
       "createdAtMs": 1772153233001,
-      "updatedAtMs": 1773555824741,
+      "updatedAtMs": 1773638775520,
       "schedule": {
         "kind": "cron",
         "expr": "15 22 * * *"
@@ -268,14 +267,14 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": 1773638100000,
-        "lastRunAtMs": 1773553993252,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 1831489,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 2,
-        "lastError": "Error: All models failed (7): nvidia-nim/moonshotai/kimi-k2.5: LLM request timed out. (unknown) | ollama/kimi-k2.5:cloud: ⚠️ API rate limit reached. Please try again later. (rate_limit) | google/gemini-2.5-flash: No API key found for provider \"google\". Auth store: /Users/chimpman/.openclaw/agents/cheetah/agent/auth-profiles.json (agentDir: /Users/chimpman/.openclaw/agents/cheetah/agent). Configure auth for this agent (openclaw agents add <id>) or copy auth-profiles.json from the main agentDir. (auth) | ollama/glm-5:cloud: ⚠️ API rate limit reached. Please try again later. (rate_limit) | ollama/glm-m4-optimal:latest: LLM request timed out. (unknown) | ollama/qwen3:8b: This operation was aborted (unknown) | gamemaker1/gemma3:12b-fc: Unknown model: gamemaker1/gemma3:12b-fc (model_not_found)"
+        "nextRunAtMs": 1773724500000,
+        "lastRunAtMs": 1773638100009,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 675511,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
       }
     },
     {
@@ -284,7 +283,7 @@
       "name": "Cheetah Research - Phase 3 Writer",
       "enabled": true,
       "createdAtMs": 1772153233002,
-      "updatedAtMs": 1773558374622,
+      "updatedAtMs": 1773639150992,
       "schedule": {
         "kind": "cron",
         "expr": "30 22 * * *"
@@ -303,11 +302,11 @@
         "to": "1474823021440012521"
       },
       "state": {
-        "nextRunAtMs": 1773639000000,
-        "lastRunAtMs": 1773557389926,
+        "nextRunAtMs": 1773725400000,
+        "lastRunAtMs": 1773639000010,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 984696,
+        "lastDurationMs": 150982,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
