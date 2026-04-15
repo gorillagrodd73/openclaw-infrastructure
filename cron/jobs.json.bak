@@ -66,8 +66,7 @@
         "lastDurationMs": 464406,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 1,
-        "lastDelivered": true,
-        "lastError": "⚠️ 🧩 Tool: `cd ~/.openclaw && git status --short | wc -l && git ls-files | wc -l` failed"
+        "lastDelivered": true
       }
     },
     {
@@ -135,8 +134,7 @@
         "lastStatus": "error",
         "lastDurationMs": 187842,
         "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 8,
-        "lastError": "Error: Unknown Channel"
+        "consecutiveErrors": 8
       }
     },
     {
